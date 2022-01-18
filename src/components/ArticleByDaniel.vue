@@ -58,17 +58,23 @@
 <style>
     .article__author {
         padding-left: 179px;
+        padding-top: 40px;
+        font-size: 30px;
+        font-weight: 400;
     }
 
     .article__title {
-        padding-left: 179px;
+        padding: 0px 179px;
+        padding-bottom: 30px;
+        font-size: 40px;
+        font-weight: 400;
     }
 
     .article__picture {
         display: flex;
-        height: 909px;
-        overflow: hidden;
         align-items: center;
+        overflow: hidden;
+        height: 750px;
     }
 
     .picture {
@@ -78,11 +84,14 @@
 
     .article__caption {
         padding-left: 20px;
+        padding-top: 8px;
+        font-weight: 400;
     }
 
     .article__text {
-        padding: 100px 338px;
-        font-size: 20px;
+        padding: 100px 250px;
+        font-size: 30px;
+        font-weight: 400;
     }
 
     .text {

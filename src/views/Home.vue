@@ -1,13 +1,13 @@
 <template>
-   <Article />
+   <ArticleByDaniel />
 </template>
 
 <script>
-import Article from '../components/Article.vue'
+import ArticleByDaniel from '../components/ArticleByDaniel.vue'
 
 export default {
    components: {
-      Article
+      ArticleByDaniel
    }
 }
 </script>
