@@ -1,7 +1,10 @@
 :root {
    --background: white;
-   --color: black;
+   --primary-color: #000000;
+   --secondary-color: #E3E3E3;
+   --highlight-color: #ADFF00;
 
-   --font-family: "roboto";
-   --font-size: 12px;
+
+   --font-family: "JetBrainsMono";
+   --font-size: 16px;
 }
