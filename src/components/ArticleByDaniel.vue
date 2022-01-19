@@ -57,24 +57,47 @@
 
 <style>
     .article__author {
-        padding-left: 179px;
+        padding-left: 20px;
         padding-top: 40px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    @media screen and (min-width: 768px) {
+        .article__author {
+            padding-left: 179px;
+            font-size: 30px;
+        }
+    }
+
+    .article__title {
+        padding: 0px 20px;
+        padding-bottom: 30px;
         font-size: 30px;
         font-weight: 400;
     }
 
-    .article__title {
-        padding: 0px 179px;
-        padding-bottom: 30px;
-        font-size: 40px;
-        font-weight: 400;
+    @media screen and (min-width: 768px) {
+        .article__title {
+            padding: 0px 179px;
+            font-size: 40px;
+        }
     }
 
     .article__picture {
         display: flex;
         align-items: center;
         overflow: hidden;
-        height: 750px;
+        height: 400px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .article__picture {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            height: 750px;
+        }
     }
 
     .picture {
@@ -89,9 +112,17 @@
     }
 
     .article__text {
-        padding: 100px 250px;
-        font-size: 30px;
+        padding: 70px 20px;
+        font-size: 20px;
         font-weight: 400;
+    }
+
+    @media screen and (min-width: 768px) {
+        .article__text {
+            padding: 100px 250px;
+            font-size: 30px;
+            font-weight: 400;
+        }
     }
 
     .text {
