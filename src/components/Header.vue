@@ -26,6 +26,6 @@ export default {
 		display: flex;
 		width: 100%;
 		height: 4rem;
-		background: var(--background-color);
+		background: var(--secondary-color);
 	}
 </style>
