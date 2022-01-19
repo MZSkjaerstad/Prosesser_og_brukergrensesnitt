@@ -21,6 +21,6 @@ export default {
 	.header {
 		width: 100%;
 		height: 4rem;
-		background: var(--background-color);
+		background: inherit;
 	}
 </style>
