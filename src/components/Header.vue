@@ -1,15 +1,18 @@
 <template>
 	<header class="header">
 		<Logo />
+		<SearchButton />
 	</header>
 </template>
 
 <script>
 
 import Logo from "./Logo.vue"
+import SearchButton from "./SearchButton.vue"
 export default {
    components: {
-		Logo
+		Logo,
+		SearchButton
    }
 }
 </script>
