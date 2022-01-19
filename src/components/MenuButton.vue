@@ -16,7 +16,7 @@ export default {
 <style>
 	.menu {
 		height: 2rem;
-		background: var(--background);
+		background: inherit;
 		border: 0;
 		cursor: pointer;
 		outline: none;
