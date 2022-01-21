@@ -1,0 +1,63 @@
+<template>
+   <div class="navigation">
+      <div class="nagigation__links navigation__item">
+         <div class="navigation__link-container" v-for="link in links">
+            <router-link class="navigation__link" :to="`${link.routerLink}`">{{ link.title }}</router-link>
+         </div>
+      </div>
+
+      <div class="navigation__contact navigation__item">
+         <div class="navigation__link-container">
+            <router-link class="navigation__link" to="/about-us">About us</router-link>
+         </div>
+
+         <div class="navigation__link-container">
+            <a href="" class="navigation__link" target="_blank">Instagram</a>
+         </div>
+
+         <div class="navigation__link-container">
+            <a href="" class="navigation__link" target="_blank">Twitter</a>
+         </div>
+         
+         <div class="navigation__link-container">
+            <a href="mailto:ind@dex.info" class="navigation__link">ind@dex.info</a>
+         </div>
+      </div>
+   </div>
+</template>
+
+<script>
+   export default {
+      links: [
+         {title: 'Announcement', routerLink:'/'},
+         {title: 'Journal', routerLink:'/'},
+         {title: 'Architecture', routerLink:'/'},
+         {title: 'Video & Film', routerLink:'/'},
+         {title: 'Live', routerLink:'/'},
+         {title: 'Notes', routerLink:'/'},
+         {title: 'Books', routerLink:'/'},
+         {title: 'Projects', routerLink:'/'},
+         {title: 'Podcasts', routerLink:'/'},
+      ]
+   }
+</script>
+
+<style>
+	.navigation {
+		display: flex;
+		width: 100%;
+		height: 4rem;
+		background: inherit;
+	}
+
+   .navigation__item {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .navigation__link-container {}
+
+   .navigation__link {}
+
+   
+</style>
