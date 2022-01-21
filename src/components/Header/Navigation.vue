@@ -28,26 +28,31 @@
 
 <script>
    export default {
-      links: [
-         {title: 'Announcement', routerLink:'/'},
-         {title: 'Journal', routerLink:'/'},
-         {title: 'Architecture', routerLink:'/'},
-         {title: 'Video & Film', routerLink:'/'},
-         {title: 'Live', routerLink:'/'},
-         {title: 'Notes', routerLink:'/'},
-         {title: 'Books', routerLink:'/'},
-         {title: 'Projects', routerLink:'/'},
-         {title: 'Podcasts', routerLink:'/'},
+      data() {
+         return {
+            links: [
+               {title: 'Announcement', routerLink:'/'},
+               {title: 'Journal', routerLink:'/'},
+               {title: 'Architecture', routerLink:'/'},
+               {title: 'Video & Film', routerLink:'/'},
+               {title: 'Live', routerLink:'/'},
+               {title: 'Notes', routerLink:'/'},
+               {title: 'Books', routerLink:'/'},
+               {title: 'Projects', routerLink:'/'},
+               {title: 'Podcasts', routerLink:'/'},
       ]
+         }
+      }
    }
 </script>
 
 <style>
 	.navigation {
-		display: flex;
-		width: 100%;
-		height: 4rem;
-		background: inherit;
+      width: 100%;
+		height: auto;
+      background: var(--background);
+      display: flex;
+      justify-content: space-evenly;
 	}
 
    .navigation__item {
@@ -57,7 +62,14 @@
 
    .navigation__link-container {}
 
-   .navigation__link {}
+   .navigation__link-container:hover .navigation__link {
+      color: var(--highlight-color);
+   }
+
+   .navigation__link {
+      color: var(--primary-color);
+      text-decoration: none;
+   }
 
    
 </style>
