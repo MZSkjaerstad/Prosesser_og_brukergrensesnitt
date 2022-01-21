@@ -1,10 +1,12 @@
 <template>
 	<header class="header">
 		<Logo />
-		<SearchBar />
+
+		<Navigation />
+
 		<div class="header__buttons">
-		<SearchButton />
-		<MenuButton />
+			<SearchButton />
+			<MenuButton />
 		</div>
 	</header>
 </template>
@@ -15,13 +17,15 @@ import Logo from "./Logo.vue"
 import SearchButton from "./SearchButton.vue"
 import MenuButton from "./MenuButton.vue"
 import SearchBar from './SearchBar.vue'
+import Navigation from './Navigation.vue'
 
 export default {
    components: {
 		Logo,
 		SearchButton,
 		MenuButton,
-		SearchBar
+		SearchBar,
+		Navigation
    }
 }
 </script>
@@ -29,12 +33,11 @@ export default {
 <style>
 	.header {
 		width: 100%;
-		height: 4rem;
-		padding: 0 2%;
+		height: auto;
+		padding: 1.5% 2%;
 		background: inherit;
 		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		
 	}
 
 	.header__buttons {
