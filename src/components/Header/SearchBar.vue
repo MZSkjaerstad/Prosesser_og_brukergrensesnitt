@@ -1,9 +1,7 @@
 <template>
-	<header class="header">
-		<Logo />
-		<SearchButton />
-		<MenuButton />
-	</header>
+	<div class="search-bar">
+		<input id="search" placeholder="search for articles, books, etc." type="text">
+	</div>
 </template>
 
 <script>
@@ -22,10 +20,14 @@ export default {
 </script>
 
 <style>
-	.header {
-		display: flex;
-		width: 100%;
-		height: 4rem;
-		background: inherit;
+	.search-bar {
+		border-bottom: 1px solid black;
+	}
+
+	#search {
+		font: var(--font-family);
+		width: 30rem;
+		border: none;
+		outline: none;
 	}
 </style>
