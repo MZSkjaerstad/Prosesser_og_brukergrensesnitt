@@ -1,6 +1,6 @@
 <template>
    <!-- <ArticleByDaniel /> -->
-   <Articles id='krysztof-01' />
+   <Articles id='daniel-01' />
 </template>
 
 <script>
