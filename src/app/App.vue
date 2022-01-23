@@ -1,14 +1,16 @@
 <template>
     <Header />
     <RouterView />
+    <Footer />
 </template>
 
 <script>
-    // Test
+    import Footer from '../components/Footer.vue'
     import Header from '../components/Header/Header.vue';
     export default {
         components: {
           Header
+          Footer
         }
     }
 </script>
