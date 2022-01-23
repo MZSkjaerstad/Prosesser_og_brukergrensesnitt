@@ -1,6 +1,6 @@
 <template>
 	<button class="search">
-		<img class="search__image" src="./../../public/assets/images/search.svg" alt="">
+		<img class="search__image" src="./../../../public/assets/images/search.svg" alt="">
 	</button>
 </template>
 
@@ -15,7 +15,7 @@ export default {
 
 <style>
 	.search {
-		height: 2rem;
+		height: 1rem;
 		background: var(--background);
 		border: 0;
 		cursor: pointer;

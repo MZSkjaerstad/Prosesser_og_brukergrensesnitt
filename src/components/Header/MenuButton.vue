@@ -1,6 +1,6 @@
 <template>
 	<button class="menu">
-		<img class="menu__image" src="./../../public/assets/images/menu.svg" alt="">
+		<img class="menu__image" src="./../../../public/assets/images/menu.svg" alt="">
 	</button>
 </template>
 
@@ -15,7 +15,7 @@ export default {
 
 <style>
 	.menu {
-		height: 2rem;
+		height: 1rem;
 		background: inherit;
 		border: 0;
 		cursor: pointer;
