@@ -59,10 +59,9 @@ export default {
 	}
 
 	.header__buttons {
-		width: 10rem;
+		width: 8rem;
 		display: flex;
 		justify-content: space-between;
-		padding: 0 0 0 5rem;
 	}
 
 	/* Toggle functions */
