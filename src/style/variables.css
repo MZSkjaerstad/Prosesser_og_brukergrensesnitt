@@ -1,10 +1,9 @@
 :root {
-   --background: white;
-   --primary-color: #000000;
-   --secondary-color: #E3E3E3;
-   --highlight-color: #ADFF00;
+	--background: white;
+	--primary-color: #000000;
+	--secondary-color: #e3e3e3;
+	--highlight-color: #adff00;
 
-
-   --font-family: "JetBrainsMono";
-   --font-size: 16px;
+	--font-family: "JetBrainsMono";
+	--font-size: 30px;
 }
