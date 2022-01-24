@@ -4,7 +4,7 @@ const state = {
 			id: 'daniel-01',
 			author: 'Daniel Birnbaum',
 			title: 'Mutual Aid, Social Distancing, and Dual Power in the State of Emergency',
-			picture: '/assets/images/article_3.jpeg',
+			picture: './assets/images/article_3.jpeg',
 			caption: 'Cover of Obieg 12: “The Speed of Guccifer.” The studio of TV UNU in the Romanian city of Râmnicu Vâlcea (a.k.a. Hackerville). Photo: Nicoleta Moise.',
 			text_1: 'In my 2016 article “Algo-ritmo,” I hyphenated the Spanish word for algorithm, creating a portmanteau consisting of the words “something” and “rhythm.”1 I played off the word “rhythm” to speak to what Derrida calls iterability in speech acts. Derrida argues that what makes speech acts effective are their iterability, that is, their repetition with alterity. For Derrida, it is alterity that enables conditions of possibility as opposed to determination—conditions of play. What McKittrick calls for in “Mathematics Black Life” is an alternative reading of the enumeration of colonial and anti-Black violence that renders an other-wise2 understanding, one that is based on an onto-epistemology that accounts for Black survival and those who lived.',
 			text_2: 'McKittrick’s focus on the “contours of Black life” as well as my focus on the “ritmo” of algo-ritmo imply patterns or rhythms that I would like to focus on here. I will argue that these patterns or rhythms are where the art or poethics of quantification lie. This is particularly important given that I will argue that algorithmic governance is a process of recursive rhythms and patterns. These rhythms and patterns are what preemptively shape a racializing affect, or what Jasbir Puar calls “slow life and debility.”3 I argue that algorithmic governance is made up of a system of modulating diffractive mechanisms (or diffractive modulators) that seek to compress the information patterns and rhythms of the world. Here, I see the potential of a poethics of other-wise diffractive patterns toward rerouting the onto-epistemology of the recursive system of algorithmic governance. I turn to algorithmic governance first.',
@@ -24,6 +24,18 @@ const state = {
 			text_4: 'We produced fifteen issues online, publishing over two hundred texts, essays, and visual pieces commissioned for the magazine; more than 50 percent of the contributors—unusually for Poland—were female. The fact that Obieg was bilingual meant that it had two distinct audiences: the Polish and Warsaw art scenes, and the wider international art world. We experimented with the language of art criticism, drawing on the legacy of the early Obieg of the 1980s and ’90s. Unusual for the era of clickbait, we rejected the fodder of mass appeal, ambitiously opting for themed issues and in-depth formats without a paywall to encourage access. We surfed on the stormy seas of theory, always in search of honest and accessible ways of writing about art and culture. We chose to forego commercial success and media hype for the sake of establishing and developing non-obvious, yet precious, connections.',
 			text_5: 'Despite our meagre budget, we managed to increase our fees for authors—regardless of their celebrity status or passport—as well as the fees for translators, guest editors, and all freelancers involved, to increase our reach and international community. Because of this, I believe, we were successful. After writing an essay for Obieg, someone from Lagos was granted a stipend in Johannesburg. Someone else came up with the idea of a biennial in northern Chile. New projects were conceived in Kyiv, Rijeka, Vilnius, and many other places. Channeled through Warsaw, people and ideas connected in fruitful collaboration.'
   		}
+	],
+
+	navigation: [
+		{title: 'Announcement', routerLink:'/'},
+		{title: 'Journal', routerLink:'/'},
+		{title: 'Architecture', routerLink:'/'},
+		{title: 'Video & Film', routerLink:'/'},
+		{title: 'Live', routerLink:'/'},
+		{title: 'Notes', routerLink:'/'},
+		{title: 'Books', routerLink:'/'},
+		{title: 'Projects', routerLink:'/'},
+		{title: 'Podcasts', routerLink:'/'},
 	]
 }
 
@@ -32,7 +44,8 @@ const getters = {
 	getArticleById: state => (id) => {
 		const article = state.articles.filter((article)=> article.id === id)
 		return article[0]
-	}
+	},
+	getNavigation: state => state.navigation
 }
 
 export const store = {
