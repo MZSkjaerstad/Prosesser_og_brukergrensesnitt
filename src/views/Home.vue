@@ -1,14 +1,15 @@
-<template>
-   <div><AnnouncementBar /></div>
+   <!-- <ArticleByDaniel /> -->
+   <Articles id='krysztof-01' />
 </template>
 
 <script>
-// import { defineComponent } from 'vue'
-import AnnouncementBar from '../components/AnnoucementBar.vue';
+import ArticleByDaniel from '../components/ArticleByDaniel.vue'
+import Articles from '../components/Articles.vue'
 
 export default {
    components: {
-      AnnouncementBar,
+      ArticleByDaniel,
+      Articles
    }
 }
 </script>
