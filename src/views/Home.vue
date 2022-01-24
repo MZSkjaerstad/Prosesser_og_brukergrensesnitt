@@ -1,18 +1,15 @@
 <template>
-   <!-- <ArticleByDaniel /> -->
-   <Articles id='daniel-01' />
+	<LatestArticles />
 </template>
 
 <script>
-import ArticleByDaniel from '../components/ArticleByDaniel.vue'
-import Articles from '../components/Articles.vue'
+	import LatestArticles from '../components/LatestArticles.vue'
 
-export default {
-   components: {
-      ArticleByDaniel,
-      Articles
-   }
-}
+	export default {
+		components: {
+			LatestArticles
+		}
+	}
 </script>
 
 <style></style>
