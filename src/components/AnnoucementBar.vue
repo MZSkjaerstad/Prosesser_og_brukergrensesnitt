@@ -28,7 +28,7 @@ export default {
 		display: flex;
 		align-items: center;
 		width: 100%;
-		height: 2rem;
+		height: 3rem;
 		background: #ADFF00;
 		overflow: hidden;
 		white-space: nowrap;
@@ -37,7 +37,7 @@ export default {
 	.announcement-bar__message {
 		font-family: 'JetBrainsMono', 'Arial Narrow', Arial, sans-serif;
 		font-weight: 400;
-		font-size: 1rem;
+		font-size: var(--font-size);
 		animation: scroll 20s linear infinite;
 		padding-left: 100%;
 	}
