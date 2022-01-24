@@ -15,7 +15,7 @@ export default {
 
 <style>
 	.logo {
-		height: 1rem;
+		height: 30px;
 		padding: 0 10rem 0 0;
 	}
 
