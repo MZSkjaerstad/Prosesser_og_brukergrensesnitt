@@ -38,16 +38,18 @@
 
 <script>
     export default {
-		 props: [
-			 'id'
-		 ],
+		props: [
+			'id'
+		],
+        
         data() {
             return {
             
             }
         },
+
         computed: {
-            article: function(){
+            article: function() {
                 const article = this.$store.getters.getArticleById(this.id)
 
                 return article
