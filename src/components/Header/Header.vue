@@ -2,11 +2,11 @@
 	<header class="header">
 		<Logo />
 
-		<Navigation />
+		<Navigation :class="`header__nav-hidden--${hideNav}`"/>
 
 		<div class="header__buttons">
-			<SearchButton />
-			<MenuButton />
+			<SearchButton @click="toggleSearch()"/>
+			<MenuButton @click="toggleNav()" />
 		</div>
 	</header>
 </template>
@@ -26,7 +26,24 @@ export default {
 		MenuButton,
 		SearchBar,
 		Navigation
-   }
+   },
+
+   data() {
+	   return {
+		   hideNav: true,
+		   hideSearch: true,
+	   }
+   },
+
+   methods: {
+	   toggleSearch() {
+		   this.hideSearch = !this.hideSearch
+	   },
+
+	   toggleNav() {
+		   this.hideNav = !this.hideNav
+	   },
+   },
 }
 </script>
 
@@ -37,6 +54,7 @@ export default {
 		padding: 1.5% 2%;
 		background: inherit;
 		display: flex;
+		justify-content: space-between;
 		
 	}
 
@@ -46,4 +64,24 @@ export default {
 		justify-content: space-between;
 		padding: 0 0 0 5rem;
 	}
+
+	/* Toggle functions */
+	
+
+	.header__nav-hidden--true {
+		display: none;
+	}
+
+	.header__nav-hidden--false {
+		display: flex;
+	}
+
+	.header__search-hidden--true {
+		display: none;
+	}
+
+	.header__search-hidden--false {
+		display: flex;
+	}
+
 </style>

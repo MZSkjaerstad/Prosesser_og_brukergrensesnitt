@@ -11,13 +11,17 @@
             <router-link class="navigation__link" :to="{path:'about'}">About us</router-link>
          </div>
 
+         <br>
+
          <div class="navigation__link-container">
-            <a href="" class="navigation__link" target="_blank">Instagram</a>
+            <a href="" class="navigation__link" target="_blank">Instagram ↗</a>
          </div>
 
          <div class="navigation__link-container">
-            <a href="" class="navigation__link" target="_blank">Twitter</a>
+            <a href="" class="navigation__link" target="_blank">Twitter ↗</a>
          </div>
+
+         <br>
          
          <div class="navigation__link-container">
             <a href="mailto:ind@dex.info" class="navigation__link">ind@dex.info</a>
@@ -57,7 +61,7 @@
 
 <style>
 	.navigation {
-      width: 100%;
+      width: 75%;
 		height: auto;
       background: var(--background);
       display: flex;
@@ -69,7 +73,10 @@
       flex-direction: column;
    }
 
-   .navigation__link-container {}
+   .navigation__link-container {
+      width: auto;
+      height: auto;
+   }
 
    .navigation__link-container:hover .navigation__link {
       color: var(--highlight-color);
@@ -79,6 +86,4 @@
       color: var(--primary-color);
       text-decoration: none;
    }
-
-   
 </style>
