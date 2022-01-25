@@ -8,8 +8,10 @@
             <div class="caption__text"> {{ journal[index].location }} </div>
             <div class="caption__text"> {{ journal[index].artist }} </div>   
          </div>
+         <div class="journal__dots">
+            <button @click="goToIndex(index)" v-for="(image, index) in journal" class="dots__dot" > </button>
+         </div>
          <img class="slideshow__image" :src="journal[index].image" :alt="journal[index].title">
-         <button class="journal__dot"></button>
       </button>
    </section>
 
@@ -20,15 +22,20 @@
    .journal {
       display: grid;
       justify-content: center;
+      width: 100vw;
    }
 
    .journal__header {
       text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+      font-family: var(--font-family);
+      font-weight: 400;
    }
 
    .journal__slideshow {
-      width: 1899px;
-      height: 1113px;
+      width: 100vw;
+      height: auto;
       padding: none;
       border: none;
       background: none;
@@ -50,6 +57,8 @@
 
    .caption__text {
       color: white;
+      font-family: var(--font-family);
+      font-weight: 400;
    }
 
    .slideshow__image {
@@ -57,17 +66,24 @@
       height: 1113px;
    }
 
-   .journal__dot {
+   .journal__dots {
+      position: relative;
+      top: 1059px;
+      height: fit-content;
+   }
+
+   .dots__dot {
       height: 24px;
       width: 24px;
       border-radius: 50%;
+      margin: 0px 20px;
       background: none;
-      border-color: white;
-      position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
+      border-color:  white;
+      border-width: 2px;
+   }
+
+   .dots__dot:hover {
+      background: white;
    }
 </style>
 
@@ -109,7 +125,13 @@
             else {
                this.index += 1;
             }
-         }
+         },
+
+         goToIndex(index) {
+				this.index = index;
+			},
+
+         // curent index = white
       }  
    }
 </script>
