@@ -53,6 +53,16 @@
       width: 385.06;
       height: 137px;
    }
+
+   @media screen and (max-width: 1100px) {
+      .footer__address {
+         display: none;
+      }
+
+      .footer {
+         justify-content: space-between;
+      }
+   }
    
    .footer__contact {
       display: grid;
