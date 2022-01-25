@@ -100,5 +100,9 @@
       .navigation__item {
          transform: translateX(0%);
       }
+
+      .navigation__link {
+         font-size: 40px;
+      }
    }
 </style>

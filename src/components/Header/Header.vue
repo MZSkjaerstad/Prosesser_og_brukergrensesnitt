@@ -2,7 +2,7 @@
 	<header class="header">
 		<Logo />
 
-		<Navigation :class="`header__nav-hidden--${hideNav}`"/>
+		<Navigation :class="`header__nav header__nav-hidden--${hideNav}`"/>
 
 		<div class="header__buttons">
 			<SearchButton @click="toggleSearch()"/>
@@ -51,7 +51,7 @@ export default {
 	.header {
 		width: 100%;
 		height: auto;
-		padding: 20px 20px;
+		padding: 20px;
 		background: inherit;
 		display: flex;
 		justify-content: space-between;
@@ -82,4 +82,14 @@ export default {
 		display: flex;
 	}
 
+	@media  screen and (max-width: 1100px) {
+
+		.header__nav {
+			width: 100%;
+			transform: translateX(-20px);
+			position: absolute;
+			margin-top: 50px;
+			z-index: 16;
+		}
+	}
 </style>
