@@ -31,36 +31,20 @@
       display: flex;
       height: 289px;
       width: 100%;
-      margin-top: 500px;
       justify-content: space-between;
       padding: 20px;
-   }
-
-   .footer__name {
-      width: 149.75px;
-      height: 45.67px;
    }
 
    .footer__info {
       display: flex;
       transform: translateX(-25%);
-      width: 45%;
-   }
-
-   .footer__address {
-      margin-top: 20px;
-      width: 385.06px;
-      height: 137px;
    }
    
    .footer__contact {
       display: grid;
-      margin-top: 20;
       margin-left: 91.94;
-      width: 236.32px;
-      height: 274px;
-   }
 
+   }
 
    .social__link {
       display: grid;
@@ -86,6 +70,11 @@
 
       .footer {
          justify-content: space-between;
+      }
+
+      .footer__info {
+         transform: translateX(none);
+         padding-left: 10px;
       }
    }
 
