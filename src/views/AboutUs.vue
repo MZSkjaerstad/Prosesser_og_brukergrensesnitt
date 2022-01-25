@@ -7,7 +7,9 @@
          <p class="body__paragraf"> {{ page.content.body[2] }} </p>
          <p class="body__paragraf"> {{ page.content.body[3] }} </p>
       </div>
+      
    </section>
+   
 </template>
 
 <script>
