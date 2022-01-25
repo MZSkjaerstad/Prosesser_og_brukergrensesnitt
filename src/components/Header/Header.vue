@@ -51,15 +51,14 @@ export default {
 	.header {
 		width: 100%;
 		height: auto;
-		padding: 1.5% 2%;
+		padding: 20px 20px;
 		background: inherit;
 		display: flex;
 		justify-content: space-between;
-		
 	}
 
 	.header__buttons {
-		width: 8rem;
+		width: 100px;
 		display: flex;
 		justify-content: space-between;
 	}
