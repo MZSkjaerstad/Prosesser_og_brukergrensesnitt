@@ -61,7 +61,7 @@
 
 <style>
 	.navigation {
-      width: 70%;
+      width: 60%;
 		height: auto;
       background: var(--background);
       display: flex;
@@ -71,7 +71,7 @@
    .navigation__item {
       display: flex;
       flex-direction: column;
-      transform: translateX(45%);
+      transform: translateX(50%);
    }
 
    .navigation__link-container {
@@ -89,8 +89,16 @@
    }
 
    @media screen and (max-width: 1100px) {
+      .navigation {
+         width: 40%;
+      }
+
       .navigation__contact {
          display: none;
+      }
+
+      .navigation__item {
+         transform: translateX(0%);
       }
    }
 </style>
