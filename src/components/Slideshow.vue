@@ -9,6 +9,7 @@
             <div class="caption__text"> {{ journal[index].artist }} </div>   
          </div>
          <img class="slideshow__image" :src="journal[index].image" :alt="journal[index].title">
+         <button class="journal__dot"></button>
       </button>
    </section>
 
@@ -54,6 +55,19 @@
    .slideshow__image {
       width: 1899px;
       height: 1113px;
+   }
+
+   .journal__dot {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background: none;
+      border-color: white;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
    }
 </style>
 
