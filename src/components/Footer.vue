@@ -7,11 +7,13 @@
          mangler også informasjon om avstand og om pil-ikon
       -->
 
-      <div class="footer__social">
-         <a class="social__about" href="">About us</a>
-         <a class="social__link" href="">Instagram</a>
-         <a class="social__link" href="">Twitter</a>
-         <div class="social__email">in@dex.info</div>
+      <div class="footer__contact">
+         <a class="contact__about" href="">About us</a>
+         <div class="contact__social">
+            <a class="social__link" href="">Instagram ↗</a>
+            <a class="social__link" href="">Twitter ↗</a>
+         </div>
+         <a href="mailto:ind@dex.info" class="contact__email">in@dex.info</a>
       </div>
    </footer>
 </template>
@@ -32,10 +34,9 @@
    }
 
    .footer {
-      border: solid;
       display: flex;
       height: 289px;
-      width: 1936px;
+      width: 100vw;
       margin-top: 500px;
    }
 
@@ -53,12 +54,21 @@
       height: 137px;
    }
    
-   .footer__social {
+   .footer__contact {
       display: grid;
       margin-top: 20;
       margin-left: 91.94;
-      width: 235.32px;
+      width: 236.32px;
       height: 274px;
+   }
+
+
+   .social__link {
+      display: grid;
+   }
+
+   .footer a:hover {
+      color: var(--highlight-color);
    }
 
 </style>
