@@ -60,6 +60,14 @@ export default {
 
    .body__paragraf {
       font-size: var(--font-size);
+      
       margin-bottom: 39.6px;
    }
+
+   @media screen and (max-width: 1100px) {
+      .about-us__body, .about-us__title {
+         width: 928px;
+      }
+   }
+
 </style>
