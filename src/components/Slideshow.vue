@@ -1,4 +1,3 @@
-     
 <template>
    <section class="journal">
       <h2 class="journal__header">Journal</h2>
