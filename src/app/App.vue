@@ -1,16 +1,19 @@
 <template>
     <Header />
+    <AnnouncementBar />
     <RouterView />
     <Footer />
 </template>
 
 <script>
-    import Footer from '../components/Footer.vue'
     import Header from '../components/Header/Header.vue';
+    import AnnouncementBar from '../components/AnnoucementBar.vue';
+    import Footer from '../components/Footer.vue'
     export default {
         components: {
           Header,
-          Footer
+          AnnouncementBar,
+          Footer,
         }
     }
 </script>

@@ -15,11 +15,11 @@ export default {
 
 <style>
 	.logo {
-		width: 4rem;
+		height: 4rem;
 	}
 
 	.logo__image  {
-		width: 100%;
-		height: auto;
+		height: 100%;
+		width: auto;
 	}
 </style>
