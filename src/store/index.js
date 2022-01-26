@@ -1,12 +1,14 @@
- import Vuex from 'vuex'
+import Vuex from 'vuex'
 import {store as articles} from './modules/articles/store'
 import {store as navigation} from './modules/navigation/store'
 import {store as pages} from './modules/pages/store'
+import {store as books} from './modules/books/store'
 
 export const store = new Vuex.Store ({
 	modules: {
 		articles,
 		navigation,
-		pages
+		pages,
+		books
 	}
 })

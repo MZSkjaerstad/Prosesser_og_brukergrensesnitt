@@ -11,7 +11,7 @@
             </div>
 
             <figure class="latest__picture">
-                <img src="assets/images/article_1.jpeg" alt="">
+                <img src="/assets/images/article_1.jpeg" alt="">
             </figure>
         </div>
 
@@ -26,7 +26,7 @@
                 </div>
 
                 <figure class="next__picture">
-                    <img class="picture" src="assets/images/article_2.jpeg" alt="">
+                    <img class="picture" src="/assets/images/article_2.jpeg" alt="">
                 </figure>
             </div>
             
@@ -40,7 +40,7 @@
                 </div>
 
                 <figure class="next__picture">
-                    <img class="picture" src="assets/images/article_3.jpeg" alt="">
+                    <img class="picture" src="/assets/images/article_3.jpeg" alt="">
                 </figure>
             </div>
         </div>
@@ -49,12 +49,6 @@
 
 <script>
     export default {
-        data () {
-            return {
-                
-            }
-        },
-
         computed: {
             article: function () {
                 const article = this.$store.getters.getArticles
