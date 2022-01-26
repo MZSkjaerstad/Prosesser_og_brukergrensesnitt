@@ -13,7 +13,7 @@ const state = {
 		},
 
 		{
-			id: 'krysztof-01',
+			id: 'krzysztof-01',
 			author: 'Krzysztof Gutfranski',
 			title: 'The Institute of the Cosmos',
 			picture: '/assets/images/article_1.jpeg',
