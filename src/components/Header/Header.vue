@@ -52,9 +52,12 @@ export default {
 		width: 100%;
 		height: auto;
 		padding: 20px;
-		background: inherit;
+		background: var(--background);
 		display: flex;
 		justify-content: space-between;
+		position: sticky;
+		top: 0;
+		z-index: 1;
 	}
 
 	.header__buttons {
