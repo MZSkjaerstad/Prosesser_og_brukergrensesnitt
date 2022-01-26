@@ -34,7 +34,7 @@
    .journal__slideshow {
       position: relative;
       text-align: center;
-      width: 100%;
+      width: 80%;
       height: auto;
       padding: none;
       border: none;
@@ -45,9 +45,8 @@
    .slideshow__caption {
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: fit-content;
+      transform: translate(-0%, -50%);
+      width: 125%;
       height: 198px;
       text-align: center;
       font-size: 50px;
@@ -67,16 +66,17 @@
    }
 
    .slideshow__image {
-      width: 100vw;
+      width: 90vw;
    }
 
    .journal__dots {
       position: absolute;
       top: 95%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 0%;
+      transform: translate(0%, -50%);
       justify-self: center;
       height: fit-content;
+      width: 125%;
    }
 
    .dots__dot {
