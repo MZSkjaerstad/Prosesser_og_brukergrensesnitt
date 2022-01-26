@@ -25,18 +25,6 @@ const state = {
 			text_5: 'Despite our meagre budget, we managed to increase our fees for authors—regardless of their celebrity status or passport—as well as the fees for translators, guest editors, and all freelancers involved, to increase our reach and international community. Because of this, I believe, we were successful. After writing an essay for Obieg, someone from Lagos was granted a stipend in Johannesburg. Someone else came up with the idea of a biennial in northern Chile. New projects were conceived in Kyiv, Rijeka, Vilnius, and many other places. Channeled through Warsaw, people and ideas connected in fruitful collaboration.'
   		}
 	],
-
-	navigation: [
-		{title: 'Announcement', routerLink:'/'},
-		{title: 'Journal', routerLink:'/'},
-		{title: 'Architecture', routerLink:'/'},
-		{title: 'Video & Film', routerLink:'/'},
-		{title: 'Live', routerLink:'/'},
-		{title: 'Notes', routerLink:'/'},
-		{title: 'Books', routerLink:'/'},
-		{title: 'Projects', routerLink:'/'},
-		{title: 'Podcasts', routerLink:'/'},
-	]
 }
 
 const getters = {
@@ -44,8 +32,7 @@ const getters = {
 	getArticleById: state => (id) => {
 		const article = state.articles.filter((article)=> article.id === id)
 		return article[0]
-	},
-	getNavigation: state => state.navigation
+	}
 }
 
 export const store = {

@@ -13,7 +13,7 @@
         components: {
           Header,
           AnnouncementBar,
-          Footer
+          Footer,
         }
     }
 </script>
