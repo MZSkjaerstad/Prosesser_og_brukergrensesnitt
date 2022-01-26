@@ -24,7 +24,7 @@
 
         computed: {
             article: function () {
-                const article = this.$store.getters.getArticles()
+                const article = this.$store.getters.getArticles
                 
                 return article[1]
             }
