@@ -85,7 +85,6 @@ export default {
 			cover: 'book_3.jpg'
 		},
 		{
-
 			title: 'Parapolitics',
 			writers: 'ANSELM FRANKE, NIDA GHOUSE, PAZ GUEVARA, ANTONIA MAJACA (EDS.)',
 			cover: 'book_4.jpg'
