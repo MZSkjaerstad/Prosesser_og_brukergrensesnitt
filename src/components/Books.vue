@@ -3,12 +3,14 @@
         <div class="books__title">Books</div>
         <div class="books__display">
             <div class="books__book" v-for="book in books">
-                <img class="books__cover" :src="`${books.cover}`" :alt="`${books.cover}`">
+                <div class="book__imgframe">
+                    <img class="book__cover" :src="`/assets/images/${book.cover}`" :alt="`${book.title}`">
+                </div>
 
-                <div class="books__information">
-                    <div class="books__title"> {{ books.title }} </div>
+                <div class="book__information">
+                    <div class="book__writers"> {{ book.writers }} </div>
 
-                    <div class="books__writers"> {{ books.writers }} </div>
+                    <div class="book__title"> {{ book.title }} </div>
                 </div>
             </div>
         </div>
@@ -17,52 +19,57 @@
 
 <script>
     export default {
-        books: [
-            {
-                title: 'Radicalizing Care',
-                writers: 'Birgit Bosold, Lena Fritsch, Vera Hofmann, Elke Krasny, Sophie Lingg',
-                cover: 'book_1.jpg'
-            },
-            {
-                title: 'Curating the Complex & The Open Strike',
-                writers: 'TERRY SMITH',
-                cover: 'book_2.jpg'
-            },
-            {
-                title: 'Amazonia',
-                writers: 'KATERYNA BOTANOVA, QUINN LATIMER',
-                cover: 'book_3.jpg'
-            },
-            {
-                title: 'Parapolitics',
-                writers: 'ANSELM FRANKE, NIDA GHOUSE, PAZ GUEVARA, ANTONIA MAJACA (EDS.)',
-                cover: 'book_4.jpg'
-            },
-            {
-                title: 'Visual Cultures as Time Travel',
-                writers: 'HENRIETTE GUNKEL, AYESHA HAMEED',
-                cover: 'book_5.jpg'
-            },
-            {
-                title: 'Dear Navigator',
-                writers: 'HU FANG',
-                cover: 'book_6.jpg'
-            },
-        ],
+        computed: {
+            books: function() {
+                const books = this.$store.getters.getBooks
+
+                return books
+            }
+        }
     }
 </script>
 
 <style>
- .books {
-    width: 100%;
- }
+    .books {
+        width: 100%;
+        padding: 100px 10px;
+    }
 
- .books__display {
+    .books__title {
+        width: 100%;
+        font-size: var(--font-size);
+        display: flex;
+        justify-content: center;
+        padding:0px 0px 40px 0px;
+    }
 
- }
+    .books__display {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 10px;
+        row-gap: 40px;
+    }
 
- .books__cover {
-     
- }
+    .book__imgframe {
+        width: 100%;
+    }
+
+    .book__cover {
+        width: 100%;
+    }
+
+    .book__writers {
+        padding-top: 10px;
+        text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 1100px) {
+        .books__display {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+
 
 </style>
