@@ -52,7 +52,7 @@ export default {
 		width: 100%;
 		height: auto;
 		padding: 20px;
-		background: var(--background);
+		background: inherit;
 		display: flex;
 		justify-content: space-between;
 		position: sticky;
