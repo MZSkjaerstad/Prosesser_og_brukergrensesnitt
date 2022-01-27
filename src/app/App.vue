@@ -1,6 +1,6 @@
 <template>
-    <Header />
-    <AnnouncementBar />
+    <Header class="header-mount" />
+    <AnnouncementBar class="announcment-mount" />
     <RouterView />
     <SubscribePopup />
     <Footer />
@@ -26,4 +26,12 @@
     @import '../style/fonts.css';
     @import '../style/variables.css';
     @import '../style/style.css';
+
+    .header-mount {
+        z-index: 14;
+    }
+
+    .announcement-mount {
+        z-index: 10;
+    }
 </style>
