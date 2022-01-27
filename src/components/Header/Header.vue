@@ -55,6 +55,9 @@ export default {
 		background: inherit;
 		display: flex;
 		justify-content: space-between;
+		position: sticky;
+		top: 0;
+		z-index: 1;
 	}
 
 	.header__buttons {

@@ -19,7 +19,7 @@ export default {
 <style>
 	.search {
 		height: 30px;
-		background: var(--background);
+		background: inherit;
 		border: 0;
 		cursor: pointer;
 		outline: none;
