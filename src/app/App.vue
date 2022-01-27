@@ -10,7 +10,7 @@
     import Header from '../components/Header/Header.vue';
     import AnnouncementBar from '../components/AnnoucementBar.vue';
     import Footer from '../components/Footer.vue';
-    import SubscribePopup from '../components/SubscribePopup.vue';
+    import SubscribePopup from '../components/SubscribePopup/SubscribePopup.vue';
     export default {
         components: {
           Header,
