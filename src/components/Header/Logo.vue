@@ -1,6 +1,6 @@
 <template>
 	<div class="logo">
-		<img class="logo__image" src="./../../../public/assets/images/in(dex).svg" alt="">
+		<router-link :to="{name:'home'}"> <img class="logo__image" src="./../../../public/assets/images/in(dex).svg" alt=""> </router-link>
 	</div>
 </template>
 
@@ -16,6 +16,7 @@ export default {
 <style>
 	.logo {
 		height: 30px;
+		cursor: pointer;
 	}
 
 	.logo__image  {
