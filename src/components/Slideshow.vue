@@ -59,9 +59,13 @@
       font-weight: 400;
    }
 
-   @media screen and (max-width: 1100px){
+   @media screen and (max-width: 1500px){
+      .slideshow__caption {
+         top: 60%;
+      }
+
       .caption__text {
-         font-size: 30px;
+         font-size: 20px;
       }
    }
 
