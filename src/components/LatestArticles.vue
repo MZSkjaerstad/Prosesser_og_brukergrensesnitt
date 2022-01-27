@@ -11,11 +11,7 @@
             </div>
 
             <figure class="latest__picture">
-<<<<<<< HEAD
                 <img class="latest__pic" src="assets/images/article_1.jpeg" alt="">
-=======
-                <img src="/assets/images/article_1.jpeg" alt="">
->>>>>>> 1b637e1f7246ec5509f98005bd830e5afe0700ac
             </figure>
         </div>
 
@@ -30,25 +26,7 @@
                 </div>
 
                 <figure class="next__picture">
-<<<<<<< HEAD
                     <img class="picture" :src="article.picture"/>
-=======
-                    <img class="picture" src="/assets/images/article_2.jpeg" alt="">
-                </figure>
-            </div>
-            
-            <div class="next__article">
-                <div class="next__title">
-                    Mutual Aid, Social Distancing, and Dual Power in the State of Emergency
-                </div>
-
-                <div class="next__text">
-                    For the elites, this might be an ungovernable world. But we still have many worlds to propagate, to live and love in comradely care.
-                </div>
-
-                <figure class="next__picture">
-                    <img class="picture" src="/assets/images/article_3.jpeg" alt="">
->>>>>>> 1b637e1f7246ec5509f98005bd830e5afe0700ac
                 </figure>
             </div>
         </div>
@@ -57,7 +35,6 @@
 
 <script>
     export default {
-<<<<<<< HEAD
         data () {
             return {
                 articles: [
@@ -82,8 +59,6 @@
             }
         },
 
-=======
->>>>>>> 1b637e1f7246ec5509f98005bd830e5afe0700ac
         computed: {
             article: function () {
                 const article = this.$store.getters.getArticles
