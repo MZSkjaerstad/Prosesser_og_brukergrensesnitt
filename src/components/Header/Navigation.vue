@@ -2,7 +2,7 @@
    <div class="navigation">
       <div class="nagigation__links navigation__item">
          <div class="navigation__link-container" v-for="link in navigation">
-            <router-link class="navigation__link" :to="`${link.routerLink}`">{{ link.title }}</router-link>
+            <router-link class="navigation__link" :to="{path: link.routerLink, props: link.routerProps}">{{ link.title }}</router-link>
          </div>
       </div>
 
@@ -35,17 +35,7 @@
       
       data() {
          return {
-         /* links: [
-            {title: 'Announcement', routerLink:'/announcement'},
-            {title: 'Journal', routerLink:'/'},
-            {title: 'Architecture', routerLink:'/'},
-            {title: 'Video & Film', routerLink:'/'},
-            {title: 'Live', routerLink:'/'},
-            {title: 'Notes', routerLink:'/'},
-            {title: 'Books', routerLink:'/'},
-            {title: 'Projects', routerLink:'/'},
-            {title: 'Podcasts', routerLink:'/'},
-      ], */
+         
          }
       },
 
@@ -99,6 +89,10 @@
 
       .navigation__item {
          transform: translateX(0%);
+      }
+
+      .navigation__link {
+         font-size: 40px;
       }
    }
 
