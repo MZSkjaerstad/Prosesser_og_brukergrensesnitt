@@ -46,15 +46,16 @@
 
                     {
                         title: 'Jimmie Durham',
+                        name: 'article-by-jimmie',
                         picture: '/assets/images/article_2.jpeg',
                         text: 'Let others wax eloquent about essences and fixed forms, ethnic identities, automobiles and Opera Houses. For Jimmie the humor was low key, bitter, and funny all at once, something on the move making you smile inwardly while trying to keep up with the shifting focus your unsettled understandings provoked.'
                     },
 
                     {
-                         title: 'Mutual Aid, Social Distancing, and Dual Power in the State of Emergency',
-                         name: 'article-by-daniel',
-                         picture: '/assets/images/article_3.jpeg',
-                         text: 'For the elites, this might be an ungovernable world. But we still have many worlds to propagate, to live and love in comradely care.'
+                        title: 'Mutual Aid, Social Distancing, and Dual Power in the State of Emergency',
+                        name: 'article-by-daniel',
+                        picture: '/assets/images/article_3.jpeg',
+                        text: 'For the elites, this might be an ungovernable world. But we still have many worlds to propagate, to live and love in comradely care.'
                     }
                 ]
             }
