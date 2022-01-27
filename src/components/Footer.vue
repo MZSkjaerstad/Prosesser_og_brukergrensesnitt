@@ -10,7 +10,7 @@
          -->
 
          <div class="footer__contact">
-            <a class="contact__about" href="">About us</a>
+            <router-link class="navigation__link" :to="{path:'about'}">About us</router-link>
             <div class="contact__social">
                <a class="social__link" href="">Instagram ↗</a>
                <a class="social__link" href="">Twitter ↗</a>
