@@ -1,6 +1,6 @@
 <template>
 	<header class="header">
-		<Logo />
+		<Logo class="header__logo" />
 
 		<SearchBar :class="`header__search header__search-hidden--${hideSearch}`"/>
 
@@ -63,23 +63,37 @@ export default {
 	.header {
 		width: 100%;
 		height: auto;
-		padding: 20px;
 		background: inherit;
 		display: flex;
 		justify-content: space-between;
 		position: sticky;
 		top: 0;
-		z-index: 1;
+	}
+
+	.header__logo {
+		margin: 20px;
+		z-index: 16;
 	}
 
 	.header__buttons {
 		width: 100px;
 		display: flex;
 		justify-content: space-between;
+		z-index: 16;
+		margin: 20px;
+	}
+
+	.header__nav {
+		position: absolute;
+		z-index: 14;
+	}
+
+	.header__search {
+		position: absolute;
+		z-index: 14;
 	}
 
 	/* Toggle functions */
-	
 
 	.header__nav-hidden--true {
 		display: none;
@@ -101,10 +115,10 @@ export default {
 
 		.header__nav {
 			width: 100%;
-			transform: translateX(-20px);
 			position: absolute;
-			margin-top: 50px;
-			z-index: 16;
+			padding-top: 50px;
+			text-align: center;
+			z-index: 14;
 		}
 
 		.header__search {}
