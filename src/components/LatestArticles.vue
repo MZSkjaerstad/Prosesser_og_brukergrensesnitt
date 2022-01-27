@@ -3,7 +3,7 @@
         Latest
         <div class="articles__latest" >
             <div class="latest__title">
-                The Institute of the Cosmos
+                <RouterLink :to="{ name: 'article-by-krzysztof' }">The Institute of the Cosmos</RouterLink>
             </div>
 
             <div class="latest__text">
@@ -18,7 +18,7 @@
         <div class="articles__next">
             <div class="next__article" v-for="article in articles">
                 <div class="next__title">
-                    {{ article.title }}
+                    <RouterLink :to="{ name: 'article-by-daniel' }">{{ article.title }}</RouterLink>
                 </div>
 
                 <div class="next__text">
@@ -52,6 +52,7 @@
 
                     {
                          title: 'Mutual Aid, Social Distancing, and Dual Power in the State of Emergency',
+                         name: 'article-by-daniel',
                          picture: '/assets/images/article_3.jpeg',
                          text: 'For the elites, this might be an ungovernable world. But we still have many worlds to propagate, to live and love in comradely care.'
                     }

@@ -32,6 +32,10 @@
             <div class="text">
                 {{ article.text_4 }}
             </div>
+
+            <div class="text">
+                {{ article.text_5 }}
+            </div>
         </div>
     </main>
 </template>
