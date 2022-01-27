@@ -2,6 +2,8 @@
 	<header class="header">
 		<Logo />
 
+		<SearchBar :class="`header__search header__search-hidden--${hideSearch}`"/>
+
 		<Navigation :class="`header__nav header__nav-hidden--${hideNav}`"/>
 
 		<div class="header__buttons">
@@ -37,11 +39,21 @@ export default {
 
    methods: {
 	   toggleSearch() {
-		   this.hideSearch = !this.hideSearch
+			if (this.hideNav === false) {
+				this.hideNav = !this.hideNav
+				this.hideSearch = !this.hideSearch
+			} else {
+		   	this.hideSearch = !this.hideSearch
+			}
 	   },
 
 	   toggleNav() {
-		   this.hideNav = !this.hideNav
+		   if (this.hideSearch === false) {
+				this.hideSearch = !this.hideSearch
+				this.hideNav = !this.hideNav
+			} else {
+		   	this.hideNav = !this.hideNav
+			}
 	   },
    },
 }
@@ -94,5 +106,7 @@ export default {
 			margin-top: 50px;
 			z-index: 16;
 		}
+
+		.header__search {}
 	}
 </style>
