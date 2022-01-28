@@ -126,7 +126,21 @@
    }
 
    @media screen and (max-width: 1100px){
+      .journal {
+         padding: 0px;
+         height: 50%;
+      }
+
+      .journal__header {
+         margin-bottom: 40px;
+      }
+
       .journal__slideshow {
+         height: 90%;
+      }
+
+      .slideshow__image {
+         width: auto;
          height: 100%;
       }
 
