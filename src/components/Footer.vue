@@ -10,10 +10,10 @@
          -->
 
          <div class="footer__contact">
-            <router-link class="navigation__link" :to="{path:'about'}">About us</router-link>
+            <router-link class="navigation__link footer__link" :to="{path:'about'}">About us</router-link>
             <div class="contact__social">
-               <a class="social__link" href="">Instagram ↗</a>
-               <a class="social__link" href="">Twitter ↗</a>
+               <a class="social__link footer__link" href="">Instagram ↗</a>
+               <a class="social__link footer__link" href="">Twitter ↗</a>
             </div>
             <a href="mailto:ind@dex.info" class="contact__email">in@dex.info</a>
          </div>
@@ -50,7 +50,7 @@
       display: grid;
    }
 
-   footer div, a {
+   .footer__link {
       font-size: 30px;
    }
 
