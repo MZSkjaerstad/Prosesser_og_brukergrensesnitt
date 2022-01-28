@@ -1,33 +1,35 @@
 <template>
     <main class="articles">
         Latest
-        <div class="articles__latest" >
-            <div class="latest__title">
-                <RouterLink :to="{ name: 'article-by-krzysztof' }">The Institute of the Cosmos</RouterLink>
+        <div class="articles__latest">
+            <RouterLink :to="{ path: `/${ latestArticle.slug }` }"><div class="latest__title">
+                {{ latestArticle.title }}
             </div>
 
             <div class="latest__text">
-                The Institute of the Cosmos is an ongoing collective research project founded in 2019. Informed by the historical ideas of Russian Cosmism, the Institute is a space for a creative investigation of the materiality of the cosmos and its strange universalism, from the perspectives of philosophy, anthropology, history of science, and art.
+               {{ latestArticle.lead }}
             </div>
 
             <figure class="latest__picture-frame">
-                <img class="latest__picture" src="assets/images/article_1.jpeg" alt="">
+                <img class="latest__picture" :src="`${latestArticle.picture}`" alt="">
             </figure>
+            </RouterLink>
         </div>
 
         <div class="articles__next">
-            <div class="next__article" v-for="article in articles">
+           <div class="next__article" v-for="article in nextArticle" > <RouterLink :to="{ path: `/${ article.slug }` }">
                 <div class="next__title">
-                    <RouterLink :to="{ name: 'article-by-daniel' }">{{ article.title }}</RouterLink>
+                    {{ article.title }}
                 </div>
 
                 <div class="next__text">
-                    {{ article.text }}
+                    {{ article.lead }}
                 </div>
 
                 <figure class="next__picture-frame">
-                    <img class="next__picture" :src="article.picture"/>
+                    <img class="next__picture" :src="`${article.picture}`"/>
                 </figure>
+                </RouterLink>
             </div>
         </div>
     </main>
@@ -37,35 +39,26 @@
     export default {
         data () {
             return {
-                articles: [
-                    // {
-                    //     title: 'The Institute of the Cosmos',
-                    //     picture: '/assets/images/article_1.jpeg',
-                    //     text: 'The Institute of the Cosmos is an ongoing collective research project founded in 2019. Informed by the historical ideas of Russian Cosmism, the Institute is a space for a creative investigation of the materiality of the cosmos and its strange universalism, from the perspectives of philosophy, anthropology, history of science, and art.'
-                    // },
-
-                    {
-                        title: 'Jimmie Durham',
-                        name: 'article-by-jimmie',
-                        picture: '/assets/images/article_2.jpeg',
-                        text: 'Let others wax eloquent about essences and fixed forms, ethnic identities, automobiles and Opera Houses. For Jimmie the humor was low key, bitter, and funny all at once, something on the move making you smile inwardly while trying to keep up with the shifting focus your unsettled understandings provoked.'
-                    },
-
-                    {
-                        title: 'Mutual Aid, Social Distancing, and Dual Power in the State of Emergency',
-                        name: 'article-by-daniel',
-                        picture: '/assets/images/article_3.jpeg',
-                        text: 'For the elites, this might be an ungovernable world. But we still have many worlds to propagate, to live and love in comradely care.'
-                    }
-                ]
+                nextArticle: null
             }
         },
 
         computed: {
-            article: function () {
-                const article = this.$store.getters.getArticles
-                
-                return article[1]
+            articles: function() {
+                const articles = this.$store.getters.getArticles
+                console.log(articles, "Hello")
+                return articles
+            },
+
+            latestArticle: function() {
+                const latestArticle = this.$store.getters.getLatestArticle
+                return latestArticle
+            },
+
+            nextArticle: function() {
+                const nextArticle = this.$store.getters.getNextArticle
+                console.log(nextArticle)
+                return nextArticle
             }
         }
     }
@@ -123,7 +116,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        text-align: center;
+        padding-top: 40px;
+        font-size: 30px;
+        font-weight: 400;
+        width: 100%;
     }
 
     .next__title {
@@ -144,14 +141,6 @@
     }
 
     .next__picture {
-        width: 100%;
-    }
-
-    .next__article {
-        text-align: center;
-        padding-top: 40px;
-        font-size: 30px;
-        font-weight: 400;
         width: 100%;
     }
 
