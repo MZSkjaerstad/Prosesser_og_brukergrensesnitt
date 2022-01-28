@@ -11,7 +11,8 @@ const state = {
 				`The in(dex) journal, launched in 2008, commissions and publishes some of the most influential writings on art, film, history, technology, and politics in its monthly online publication and series of books, published together with Sternberg Press and the University of Minnesota Press. Many essays first published in e-flux journal have become canonical readings in the art theory of our time. In 2016, e-flux launched a new publication on architecture, and in 2019, e-flux Video & Film began streaming artist films online.`
 			]
 		}
-	}
+	},
+	articles:  []
 }
 
 const getters = {
@@ -21,4 +22,25 @@ const getters = {
 export const store = {
 	state,
 	getters
+}
+
+export default {
+	computed: {
+		article: function () {
+			 const articles = this.$store.getters.getArticles
+			 	console.log(articles, "articlessssss")
+			 return articles
+		},
+
+		articleById: function() {
+			  const articleById = this.$store.getters.getArticleById(this.id)
+			  return articleById
+		},
+
+		latestArticle: function() {
+			 const latestArticle = this.$store.getters.getLatestArticle
+			 return latestArticle
+		},
+		
+  }
 }

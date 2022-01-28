@@ -13,93 +13,7 @@
          </div>
       </button>
    </section>
-
 </template>
-
-<style>
-   .journal {
-      display: grid;
-      justify-content: center;
-      width: 100%;
-   }
-
-   .journal__header {
-      text-align: center;
-      font-size: 30px;
-      margin-bottom: 40px;
-      font-family: var(--font-family);
-      font-weight: 400;
-   }
-
-   .journal__slideshow {
-      position: relative;
-      text-align: center;
-      width: 80%;
-      height: auto;
-      padding: none;
-      border: none;
-      background: none;
-      display: grid;
-      cursor: pointer;
-   }
-
-   .slideshow__caption {
-      position: absolute;
-      top: 50%;
-      transform: translate(-0%, -50%);
-      width: 125%;
-      height: 198px;
-      text-align: center;
-      font-size: 50px;
-      font-weight: 400;
-   }
-
-   .caption__text {
-      color: white;
-      font-family: var(--font-family);
-      font-weight: 400;
-   }
-
-   @media screen and (max-width: 1500px){
-      .slideshow__caption {
-         top: 80%;
-      }
-
-      .caption__text {
-         font-size: 20px;
-      }
-   }
-
-   .slideshow__image {
-      width: 90vw;
-   }
-
-   .journal__dots {
-      position: absolute;
-      top: 95%;
-      left: 0%;
-      transform: translate(0%, -50%);
-      justify-self: center;
-      height: fit-content;
-      width: 125%;
-   }
-
-   .dots__dot {
-      height: 24px;
-      width: 24px;
-      border-radius: 50%;
-      margin: 0px 20px;
-      background: none;
-      border: solid 1px;
-      border-color: white;
-      border-width: 2px;
-      cursor: pointer;
-   }
-
-   .dots__dot:hover {
-      background: white;
-   }
-</style>
 
 <script>
    export default {
@@ -134,3 +48,94 @@
    }
 </script>
 
+<style>
+   .journal {
+      display: grid;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+   }
+
+   .journal__header {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+      font-family: var(--font-family);
+      font-weight: 400;
+   }
+
+   .journal__slideshow {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding: none;
+      border: none;
+      background: none;
+      cursor: pointer;
+   }
+
+   .slideshow__caption {
+      position: absolute;
+      top: 50%;
+      transform: translate(-0%, -50%);
+      width: 100%;
+      height: 198px;
+      text-align: center;
+      font-size: 50px;
+      font-weight: 400;
+   }
+
+   .caption__text {
+      color: white;
+      font-family: var(--font-family);
+      font-weight: 400;
+   }
+
+   .slideshow__image {
+      object-fit: cover;
+      width: 100vw;
+   }
+
+   .journal__dots {
+      position: absolute;
+      top: 95%;
+      left: 0%;
+      transform: translate(0%, -50%);
+      justify-self: center;
+      height: fit-content;
+      width: 100%;
+   }
+
+   .dots__dot {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      margin: 0px 20px;
+      background: none;
+      border: solid 1px;
+      border-color: white;
+      border-width: 2px;
+      cursor: pointer;
+   }
+
+   .dots__dot:hover {
+      background: white;
+   }
+
+   @media screen and (max-width: 1100px){
+      .journal__slideshow {
+         height: 100%;
+      }
+
+      .slideshow__caption {
+         top: 80%;
+      }
+
+      .caption__text {
+         font-size: 20px;
+      }
+   }
+</style>

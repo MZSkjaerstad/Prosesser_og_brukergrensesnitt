@@ -14,6 +14,7 @@ export default {
 			}
 		}
 	},
+	
 	methods: {
 		announcementBarAnimationToggle() {
 			this.announcementBar.playing = !this.announcementBar.playing
