@@ -10,7 +10,7 @@
 
       <div class="navigation__contact navigation__item">
          <div class="navigation__link-container">
-            <router-link class="navigation__link" :to="{path:'about'}">About us</router-link>
+            <router-link class="navigation__link" :to="{path:'about-us'}">About us</router-link>
          </div>
 
          <br>
