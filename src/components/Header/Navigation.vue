@@ -1,5 +1,7 @@
 <template>
    <div class="navigation">
+      <div class="navigation__spacer"/>
+
       <div class="nagigation__links navigation__item">
          <div class="navigation__link-container" v-for="link in navigation">
             <router-link class="navigation__link" :to="{path: link.routerLink, props: link.routerProps}">{{ link.title }}</router-link>
@@ -32,13 +34,6 @@
 
 <script>
    export default {
-      
-      data() {
-         return {
-         
-         }
-      },
-
       computed: {
          navigation: function(){
             const links = this.$store.getters.getNavigation
@@ -51,11 +46,12 @@
 
 <style>
 	.navigation {
-      width: 60%;
+      width: 100%;
 		height: auto;
-      background: var(--background);
+      background: var(--secondary-color);
       display: flex;
       justify-content: space-evenly;
+      padding: 20px;
 	}
 
    .navigation__item {
@@ -84,6 +80,10 @@
       }
 
       .navigation__contact {
+         display: none;
+      }
+
+      .navigation__spacer {
          display: none;
       }
 
