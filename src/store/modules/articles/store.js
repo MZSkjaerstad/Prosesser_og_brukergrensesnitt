@@ -1,24 +1,12 @@
 const state = {
 	articles: [
 		{
-			id: 'daniel-01',
-			author: 'Daniel Birnbaum',
-			title: 'Mutual Aid, Social Distancing, and Dual Power in the State of Emergency',
-			picture: './assets/images/article_3.jpeg',
-			caption: 'Cover of Obieg 12: “The Speed of Guccifer.” The studio of TV UNU in the Romanian city of Râmnicu Vâlcea (a.k.a. Hackerville). Photo: Nicoleta Moise.',
-			body: [
-				'In my 2016 article “Algo-ritmo,” I hyphenated the Spanish word for algorithm, creating a portmanteau consisting of the words “something” and “rhythm.”1 I played off the word “rhythm” to speak to what Derrida calls iterability in speech acts. Derrida argues that what makes speech acts effective are their iterability, that is, their repetition with alterity. For Derrida, it is alterity that enables conditions of possibility as opposed to determination—conditions of play. What McKittrick calls for in “Mathematics Black Life” is an alternative reading of the enumeration of colonial and anti-Black violence that renders an other-wise2 understanding, one that is based on an onto-epistemology that accounts for Black survival and those who lived.',
-			 	'McKittrick’s focus on the “contours of Black life” as well as my focus on the “ritmo” of algo-ritmo imply patterns or rhythms that I would like to focus on here. I will argue that these patterns or rhythms are where the art or poethics of quantification lie. This is particularly important given that I will argue that algorithmic governance is a process of recursive rhythms and patterns. These rhythms and patterns are what preemptively shape a racializing affect, or what Jasbir Puar calls “slow life and debility.”3 I argue that algorithmic governance is made up of a system of modulating diffractive mechanisms (or diffractive modulators) that seek to compress the information patterns and rhythms of the world. Here, I see the potential of a poethics of other-wise diffractive patterns toward rerouting the onto-epistemology of the recursive system of algorithmic governance. I turn to algorithmic governance first.',
-			 	'Since World War II, societies have been shifting from systems of institutional enclosures that discipline citizens’ ways of being to systems of infinite and continuous modulating mechanisms, which generatively control access to institutions and human behavior.4 Digital technologies and the “internet of things” have enabled increasingly distributed logics, rationalities, and practices of governance via cybernetic systems of communication and predictive control. While sovereign, discipline, and control technologies of capture continue to exist in concert, it is increasingly control that becomes the dominant logic of systems of governance.',
-				'Within this context of cybernetic systems of governance, control has become the guaranteed form of “truth.” That is, the assured path to “truth” is to shape the futurity of “truth” in the present. Thus, rather than try to prevent or deter the existence of what is empirically verifiable, cybernetic systems of control work via a play on temporality that manufactures a becoming-assemblage such as an event, organization, or body in the form of a threat, an anxiety, or desire to mold futurity in the present (or present futurity). In other words, regardless of whether a becoming-assemblage is empirically or objectively verifiable, a future event is constructed based on already existing predispositions or beliefs. The operative logic for such an environment of manufactured futurity is preemptive action.'
-			]
-		},
-
-		{
-			id: 'krysztof-01',
+			id: 'krzysztof-01',
 			author: 'Krzysztof Gutfranski',
 			title: 'The Institute of the Cosmos',
-			picture: '/assets/images/article_1.jpeg',
+			slug: 'the-institute-of-the-cosmos',
+			lead: 'The Institute of the Cosmos is an ongoing collective research project founded in 2019. Informed by the historical ideas of Russian Cosmism, the Institute is a space for a creative investigation of the materiality of the cosmos and its strange universalism, from the perspectives of philosophy, anthropology, history of science, and art.',
+			picture: './assets/images/article_1.jpeg',
 			caption: 'Liz Craft, She is looking at me, 2015. Ceramic, aluminium, 84 x 82 x 12 cm.',
 			body: [
 				'The Polish magazine Obieg (Circuit) was launched in 1987, beginning as a bulletin; its name was a reference to a “third circuit” of publications that the magazine itself attempted to forge: autonomous from the dictates of the state, yet also distinct from the publications produced by the “official” political opposition, including the Solidarity movement and associated groups. The publication soon became one of the only periodicals in Polish to offer space for alternative communities and ideas; quickly, it grew into a trusted information guide and platform for exchanging what would become crucial historical perspectives and concepts. As Poland underwent seismic political changes, so did the magazine. In the 1990s, it was no longer a bulletin, but rather transformed into a fully fledged publication funded by the Ujazdowski Castle Centre for Contemporary Art (CCA Ujazdowski). Briefly suspended in 2002, the magazine resumed online in 2004. Notwithstanding that after a decade and a half it became aligned with a museum—a state institution after all—it retained autonomy to publish what it had always pursued.',
@@ -29,11 +17,12 @@ const state = {
 			]
 		},
 
-		{
+		{	id: 'jimmydurham-01',
+			author: 'Jimmie Durham',
 			title: 'Jimmie Durham',
 			slug: 'jimmie-durham',
 			lead: `Let others wax eloquent about essences and fixed forms, ethnic identities, automobiles and Opera Houses. For Jimmie the humor was low key, bitter, and funny all at once, something on the move making you smile inwardly while trying to keep up with the shifting focus your unsettled understandings provoked.`,
-			picture: '/assets/images/article_2.jpg',
+			picture: './assets/images/article_2.jpeg',
 			caption: '',
 			body: [
 				`The artworks exhibited at Casemore Kirkeby, however, make clear that in fact there were inklings of these developments a few years prior to the artist’s revelatory moment with the maps in the desk. Here, in a selection of sculptural paintings made from 1964 to ’67, Rapoport uses upholstery fabric as her primary substrate, both for tracing the gaudy floral patterns in paint, and for stenciling curvilinear, abstract forms that mark the first instances of the artist’s transcription of her visual language into her artwork. Viewed alongside several drawings made during the same period, the exhibition reveals Rapoport as a process-based artist whose primary medium is information.`,
@@ -41,6 +30,22 @@ const state = {
 				`Across the gallery, Memoralia (1967), made just a year after Bullseye, is one of the strongest works in the exhibition, and shows further play with adding and manipulating information within an existing system. Here, the artist stacks two canvases, both covered again with upholstery fabric. We don’t see much of the bottom painting: it is slightly larger than its sister, and with just a few inches of the red and orange painted blooms revealed all the way around, it serves as a kind of dimensional frame for the artwork as a whole. On top, once again, is a loud flowery upholstery fabric, selectively traced and painted over by Rapoport. In two columns repeating vertically down the canvas, the artist stencils on a graphic, white shape that is at once a uterus and a blooming calla lily. In the negative space between each repetition of these patterns, the artist delineates another wavy, perhaps vaginal, organic form by painting over the upholstery pattern with an even, rich golden yellow. In Memoralia, these distinctly female, repeated shapes across the artwork are carefully plotted shifts and amplifications within the artist’s source material.`,
 				`The back gallery showcases imPOSSIBLE Conversations, a 2013 installation-based work that carries the thread of these early experiments forward into work made before Rapoport’s death in 2015 and expands their possibility for manipulation and iteration by adding a social dimension. Drawing on Alvin Roth and Lloyd Shapley’s economic theories about how audiences, institutions, and companies form stable matches within markets, Rapoport made black-and-white, 8 x 10” photographs of a selection of these early fabric paintings, and then paired each with an advertisement page from editions of The New York Times to form a collaged, composite artwork. She then invited ten viewers to assign a headline from other advertisements to the ten artworks, installing the new headlines directly above the composites. The resulting pairings are uncanny: both in the way her paintings echo the forms in the advertisements, and in how the viewers assign content and even humor to the visual information. In this work, as across this show, Rapoport is an artist-engineer, coding and riffing on the internal structures of her artworks to create new visual data for the viewer.`,
 			],
+		},
+
+		{
+			id: 'daniel-01',
+			author: 'Daniel Birnbaum',
+			title: 'Mutual Aid, Social Distancing, and Dual Power in the State of Emergency',
+			slug: 'mutual-aid-social-distancing-and-dual-power-in-the-state-of-emergency',
+			lead: `For the elites, this might be an ungovernable world. But we still have many worlds to propagate, to live and love in comradely care.`,
+			picture: './assets/images/article_3.jpeg',
+			caption: 'Cover of Obieg 12: “The Speed of Guccifer.” The studio of TV UNU in the Romanian city of Râmnicu Vâlcea (a.k.a. Hackerville). Photo: Nicoleta Moise.',
+			body: [
+				'In my 2016 article “Algo-ritmo,” I hyphenated the Spanish word for algorithm, creating a portmanteau consisting of the words “something” and “rhythm.”1 I played off the word “rhythm” to speak to what Derrida calls iterability in speech acts. Derrida argues that what makes speech acts effective are their iterability, that is, their repetition with alterity. For Derrida, it is alterity that enables conditions of possibility as opposed to determination—conditions of play. What McKittrick calls for in “Mathematics Black Life” is an alternative reading of the enumeration of colonial and anti-Black violence that renders an other-wise2 understanding, one that is based on an onto-epistemology that accounts for Black survival and those who lived.',
+			 	'McKittrick’s focus on the “contours of Black life” as well as my focus on the “ritmo” of algo-ritmo imply patterns or rhythms that I would like to focus on here. I will argue that these patterns or rhythms are where the art or poethics of quantification lie. This is particularly important given that I will argue that algorithmic governance is a process of recursive rhythms and patterns. These rhythms and patterns are what preemptively shape a racializing affect, or what Jasbir Puar calls “slow life and debility.”3 I argue that algorithmic governance is made up of a system of modulating diffractive mechanisms (or diffractive modulators) that seek to compress the information patterns and rhythms of the world. Here, I see the potential of a poethics of other-wise diffractive patterns toward rerouting the onto-epistemology of the recursive system of algorithmic governance. I turn to algorithmic governance first.',
+			 	'Since World War II, societies have been shifting from systems of institutional enclosures that discipline citizens’ ways of being to systems of infinite and continuous modulating mechanisms, which generatively control access to institutions and human behavior.4 Digital technologies and the “internet of things” have enabled increasingly distributed logics, rationalities, and practices of governance via cybernetic systems of communication and predictive control. While sovereign, discipline, and control technologies of capture continue to exist in concert, it is increasingly control that becomes the dominant logic of systems of governance.',
+				'Within this context of cybernetic systems of governance, control has become the guaranteed form of “truth.” That is, the assured path to “truth” is to shape the futurity of “truth” in the present. Thus, rather than try to prevent or deter the existence of what is empirically verifiable, cybernetic systems of control work via a play on temporality that manufactures a becoming-assemblage such as an event, organization, or body in the form of a threat, an anxiety, or desire to mold futurity in the present (or present futurity). In other words, regardless of whether a becoming-assemblage is empirically or objectively verifiable, a future event is constructed based on already existing predispositions or beliefs. The operative logic for such an environment of manufactured futurity is preemptive action.'
+			]
 		},
 	],
 }
@@ -50,7 +55,9 @@ const getters = {
 	getArticleById: state => (id) => {
 		const article = state.articles.filter((article)=> article.id === id)
 		return article[0]
-	}
+	},
+	getLatestArticle: state => state.articles[0],
+	getNextArticle: state => state.articles.slice(-2)
 }
 
 export const store = {
