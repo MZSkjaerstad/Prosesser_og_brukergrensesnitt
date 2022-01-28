@@ -20,7 +20,7 @@ export default {
 		border: 0;
 		cursor: pointer;
 		outline: none;
-		background: inherit;
+		background: transparent;
 		position: relative;
 	}
 </style>

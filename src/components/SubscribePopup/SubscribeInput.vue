@@ -1,12 +1,11 @@
 <template>
   <div class="input-container" >
 	  <input class="input-container__input" type="text" :placeholder="`${this.subscribeInput.placeholder}`">
-	  <button class="input-container__button" @click="submit()">subscribe</button>
+	  <button class="input-container__button" @click="submitSubscribe()">subscribe</button>
   </div>
 </template>
 
 <script>
-import SubscribePopup from './SubscribePopup.vue'
 
 export default {
 	data() {
@@ -14,15 +13,12 @@ export default {
 			subscribeInput: {
 				placeholder: "enter your e-mail"
 			},
-			components: {
-				SubscribePopup
-			},
 		}
 	},
 	methods: {
-		submit() {
-			alert()
-			this.$emit("closePopup")
+		submitSubscribe() {
+			this.$parent.subscribed()
+			console.log("emitted")
 		}
 	},
 
@@ -60,7 +56,7 @@ export default {
 		font-family: var(--font-family);
 		font-size: 30px;
 		margin: 0 0 0 0.3em;
-		padding: 1px 1em;
+		padding: 1px 6%;
 	}
 
 </style>

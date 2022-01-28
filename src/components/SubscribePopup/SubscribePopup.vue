@@ -2,7 +2,7 @@
   <div class="subscribe" v-if='this.SubscribePopup.visible' @click='showInput()'>
 	  <p class="subscribe__text" v-if='!this.SubscribeInput.visible'>Subscribe to the in(dex) newsletter for monthly updates</p>
 	  <SubscribeInput v-if='this.SubscribeInput.visible' />
-	  <CloseButton class="subscribe__close" @click = "closePopup()" />
+	  <CloseButton class="subscribe__close" @click="closePopup()" />
   </div>
 </template>
 
@@ -35,8 +35,10 @@ export default {
 			this.SubscribeInput.visible = true
 		},
 
-		submit() {
-			alert("Thank you for subscribing to our newsletter!")
+		subscribed() {
+			console.log("Subscribed")
+			alert("Thank you for subscribing to our email newsletter!")
+			this.closePopup()
 		}
 	}
 }
@@ -45,17 +47,20 @@ export default {
 <style>
 	.subscribe {
 		display: flex;
+		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		width: 100%;
+		margin: auto;
+		width: 95%;
 		height: 62px;
 		padding: 11px;
 		font-size: 1em;
 		position: sticky;
-		bottom: 0;
+		bottom: 10px;
 		background: var(--secondary-color);
 		cursor: pointer;
 		z-index: 1;
+		border-radius: 10px;
 	}
 
 	.subscribe:hover {
