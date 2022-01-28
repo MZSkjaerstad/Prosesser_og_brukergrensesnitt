@@ -21,13 +21,21 @@ export default {
 
 <style>
 	.search-bar {
-		border-bottom: 1px solid black;
+		width: 100%;
+		background: var(--secondary-color);
+		display: flex;
+		justify-content: center;
 	}
 
 	#search {
 		font: var(--font-family);
-		width: 30rem;
-		border: none;
+		background: var(--secondary-color);
+		margin: 15px;
+		width: 40%;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: 1px solid black;
 		outline: none;
 	}
 </style>

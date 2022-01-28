@@ -9,18 +9,52 @@
             <div class="caption__text"> {{ journal[index].artist }} </div>   
          </div>
          <div class="journal__dots">
-            <button @click="goToIndex(index)" v-for="(image, index) in journal" class="dots__dot" > </button>
+            <button @click="goToIndex(index)" v-for="(image, index) in journal" class="dots__dot" ></button>
          </div>
       </button>
    </section>
-
 </template>
+
+<script>
+   export default {
+      data() {
+         return {
+            index: 0
+         };
+      },
+
+      computed: {
+         journal: function(){
+            const journal = this.$store.getters.getJournal
+            return journal
+         }
+      },
+      
+      methods: {
+         next() {
+            if (this.journal.length === this.index + 1) {
+               this.index = 0;
+            }
+
+            else {
+               this.index += 1;
+            }
+         },
+
+         goToIndex(index) {
+				this.index = index;
+			},
+      }  
+   }
+</script>
 
 <style>
    .journal {
       display: grid;
       justify-content: center;
       width: 100%;
+      height: 100%;
+      padding: 10px;
    }
 
    .journal__header {
@@ -34,19 +68,20 @@
    .journal__slideshow {
       position: relative;
       text-align: center;
-      width: 80%;
-      height: auto;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
       padding: none;
       border: none;
       background: none;
-      display: grid;
+      cursor: pointer;
    }
 
    .slideshow__caption {
       position: absolute;
       top: 50%;
       transform: translate(-0%, -50%);
-      width: 125%;
+      width: 100%;
       height: 198px;
       text-align: center;
       font-size: 50px;
@@ -70,7 +105,8 @@
    }
 
    .slideshow__image {
-      width: 90vw;
+      object-fit: cover;
+      width: 100vw;
    }
 
    .journal__dots {
@@ -80,7 +116,7 @@
       transform: translate(0%, -50%);
       justify-self: center;
       height: fit-content;
-      width: 125%;
+      width: 100%;
    }
 
    .dots__dot {
@@ -89,61 +125,41 @@
       border-radius: 50%;
       margin: 0px 20px;
       background: none;
-      border-color:  white;
+      border: solid 1px;
+      border-color: white;
       border-width: 2px;
+      cursor: pointer;
    }
 
    .dots__dot:hover {
       background: white;
    }
-</style>
 
-<script>
-   export default {
-      data() {
-         return {
-            index: 0,
-            journal: [
-               {
-                  title: 'And My Flames Stay Till You Get Out My Way',
-                  artist: 'April Bey',
-                  location: 'Museum für Moderne Kunst',
-                  image: './assets/images/journal_1.jpeg'
-               },
-               {
-                  title: 'Crip Time',
-                  artist: 'Kenny Fries',
-                  location: 'Vienna Art Week',
-                  image: './assets/images/journal_2.jpeg'
-               },
-               {
-                  title: 'Losing Control',
-                  artist: 'Alte Pinakothek',
-                  location: 'Novuyo Moyo',
-                  image: './assets/images/journal_3.jpeg'
-               },
-            ],
-         };
-      },
+   @media screen and (max-width: 1100px){
+      .journal {
+         padding: 0px;
+         height: 50%;
+      }
 
-      methods: {
+      .journal__header {
+         margin-bottom: 40px;
+      }
 
-         next() {
-            if (this.journal.length === this.index + 1) {
-               this.index = 0;
-            }
+      .journal__slideshow {
+         height: 90%;
+      }
 
-            else {
-               this.index += 1;
-            }
-         },
+      .slideshow__image {
+         width: auto;
+         height: 100%;
+      }
 
-         goToIndex(index) {
-				this.index = index;
-			},
+      .slideshow__caption {
+         top: 80%;
+      }
 
-         // curent index = white
-      }  
+      .caption__text {
+         font-size: 20px;
+      }
    }
-</script>
-
+</style>

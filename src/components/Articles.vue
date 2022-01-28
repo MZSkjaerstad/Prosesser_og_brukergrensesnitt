@@ -18,19 +18,19 @@
 
         <div class="article__text">
             <div class="text">
-                {{ article.text_1 }}
+                {{ article.body[0] }}
             </div>
 
             <div class="text">
-                {{ article.text_2 }}
+                {{ article.body[1] }}
             </div>
 
             <div class="text">
-                {{ article.text_3 }}
+                {{ article.body[2] }}
             </div>
 
             <div class="text">
-                {{ article.text_4 }}
+                {{ article.body[3] }}
             </div>
         </div>
     </main>
