@@ -17,18 +17,19 @@
         </div>
 
         <div class="articles__next">
-           <div class="next__article" v-for="article in nextArticle" > <RouterLink :to="{ path: `/${ article.slug }` }">
-                <div class="next__title">
-                    {{ article.title }}
-                </div>
+           <div class="next__article" v-for="article in nextArticle" >
+               <RouterLink class="next__link" :to="{ path: `/${ article.slug }` }">
+                    <div class="next__title">
+                        {{ article.title }}
+                    </div>
 
-                <div class="next__text">
-                    {{ article.lead }}
-                </div>
+                    <div class="next__text">
+                        {{ article.lead }}
+                    </div>
 
-                <figure class="next__picture-frame">
-                    <img class="next__picture" :src="`${article.picture}`"/>
-                </figure>
+                    <figure class="next__picture-frame">
+                        <img class="next__picture" :src="`${article.picture}`"/>
+                    </figure>
                 </RouterLink>
             </div>
         </div>
@@ -123,9 +124,15 @@
         width: 100%;
     }
 
+    .next__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .next__title {
         font-size: 50px;
-        width: 50%;
+        width: 80%;
     }
 
     .next__text {
