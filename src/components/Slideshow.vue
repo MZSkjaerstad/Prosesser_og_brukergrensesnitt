@@ -94,6 +94,16 @@
       font-weight: 400;
    }
 
+   @media screen and (max-width: 1500px){
+      .slideshow__caption {
+         top: 60%;
+      }
+
+      .caption__text {
+         font-size: 20px;
+      }
+   }
+
    .slideshow__image {
       object-fit: cover;
       width: 100vw;

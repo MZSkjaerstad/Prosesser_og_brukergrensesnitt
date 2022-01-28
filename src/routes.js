@@ -21,4 +21,3 @@ export default [
    { name: 'mutual-aid-social-distancing-and-dual-power-in-the-state-of-emergency', path: '/mutual-aid-social-distancing-and-dual-power-in-the-state-of-emergency', component: ArticleByDaniel },
    { name: 'the-institute-of-the-cosmos', path: '/the-institute-of-the-cosmos', component: ArticleByKrzysztof },
    { name: 'jimmie-durham', path: '/jimmie-durham', component: ArticleByJimmyDurham },
-]
