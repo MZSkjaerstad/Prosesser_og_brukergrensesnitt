@@ -10,8 +10,8 @@
                 The Institute of the Cosmos is an ongoing collective research project founded in 2019. Informed by the historical ideas of Russian Cosmism, the Institute is a space for a creative investigation of the materiality of the cosmos and its strange universalism, from the perspectives of philosophy, anthropology, history of science, and art.
             </div>
 
-            <figure class="latest__picture">
-                <img class="latest__pic" src="assets/images/article_1.jpeg" alt="">
+            <figure class="latest__picture-frame">
+                <img class="latest__picture" src="assets/images/article_1.jpeg" alt="">
             </figure>
         </div>
 
@@ -25,8 +25,8 @@
                     {{ article.text }}
                 </div>
 
-                <figure class="next__picture">
-                    <img class="picture" :src="article.picture"/>
+                <figure class="next__picture-frame">
+                    <img class="next__picture" :src="article.picture"/>
                 </figure>
             </div>
         </div>
@@ -73,6 +73,8 @@
 
 <style>
     .articles {
+        display: flex;
+        flex-direction: column;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -80,13 +82,13 @@
         font-size: 30px;
         font-weight: 400;
         width: 100%;
-        padding: 20px;
+        padding: 20px 10px;
     }
 
-    @media screen and (min-width: 768px) {
-        .articles {
-            padding: 40px 0px 0px;
-        }
+    /* LATEST */
+
+    .articles__latest {
+        width: 75%;
     }
 
     .latest__title {
@@ -99,58 +101,49 @@
         font-size: 20px;
     }
 
-    @media screen and (min-width: 768px) {
-        .latest__text {
-            padding: 20px 400px 0px;
-        }
-    }
-
-    .latest__picture {
+    .latest__picture-frame {
+        width: 100%;
         padding-top: 40px;   
     }
 
-    .latest__pic {
+    .latest__picture {
         width: 100%;
     }
 
+    /* NEXT */
+
     .articles__next {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
         padding-top: 90px;
     }
 
-    @media screen and (min-width: 768px) {
-        .articles__next {
-            display: flex;
-            padding: 23px;
-        }
+    .next__article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
     }
 
     .next__title {
         font-size: 50px;
+        width: 50%;
     }
 
     .next__text {
+        width: 100%;
         padding-top: 20px;
+        font-size: 20px;
     }
 
-    @media screen and (min-width: 768px) {
-        .next__text {
-            padding: 20px 80px 0px;
-            font-size: 20px;
-        }
-    }
-
-    .next__picture {
-        width: 660px;
+    .next__picture-frame {
+        width: 100%;
+        height: auto;
         padding-top: 40px;
     }
 
-    @media screen and (min-width: 768px) {
-        .next__picture {
-            width: 675px;
-        }
-    }
-
-    .picture {
+    .next__picture {
         width: 100%;
     }
 
@@ -160,5 +153,21 @@
         font-size: 30px;
         font-weight: 400;
         width: 100%;
+    }
+
+    @media screen and (max-width: 1100px) {
+        .articles {
+            padding: 40px 0px 0px;
+        }
+
+        .articles__latest {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .articles__next {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 10px;
+        }
     }
 </style>
