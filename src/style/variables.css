@@ -1,9 +1,30 @@
 :root {
-	--background: white;
-	--primary-color: #000000;
-	--secondary-color: #e3e3e3;
-	--highlight-color: #adff00;
+   /* Background */
+   --background: white;
 
-	--font-family: "JetBrainsMono";
-	--font-size: 30px;
+   /* Color-palette */
+   --primary-color: #000000;
+   --secondary-color: #e3e3e3;
+   --highlight-color: #adff00;
+
+   /* Font-style */
+   --font-family: "JetBrainsMono";
+
+   --font-size-body: 30px;
+   --font-size-large: 1.65rem;
+   --font-size-small: 0.65rem;
+
+   /* Spacing */
+
+   --spacing-small: 20px;
+   --spacing-medium: 2rem;
+   --spacing-large: 5rem;
+}
+
+@media screen and (max-width: 1100px) {
+   :root {
+      --font-size-body: 20px;
+
+      --spacing-small: 10px;
+   }
 }
