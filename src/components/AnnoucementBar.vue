@@ -30,15 +30,15 @@ export default {
 		align-items: center;
 		width: 100%;
 		height: 62px;
-		background: #ADFF00;
+		background: var(--highlight-color);
 		overflow: hidden;
 		white-space: nowrap;
 	}
 
 	.announcement-bar__message {
-		font-family: 'JetBrainsMono', 'Arial Narrow', Arial, sans-serif;
-		font-weight: 400;
-		font-size: 1em;
+		font-family: var(--font-family);
+		font-weight: var(--font-weight-body);
+		font-size: var(--font-size-body);
 		animation: scroll 20s linear infinite;
 		padding-left: 100%;
 	}

@@ -62,7 +62,7 @@ export default {
 <style>
 	.header {
 		width: 100%;
-		height: auto;
+		height: 64px;
 		background: inherit;
 		display: flex;
 		justify-content: space-between;
@@ -71,7 +71,7 @@ export default {
 	}
 
 	.header__logo {
-		margin: 20px;
+		margin: auto var(--spacing-medium);
 		z-index: 16;
 	}
 
@@ -80,7 +80,7 @@ export default {
 		display: flex;
 		justify-content: space-between;
 		z-index: 16;
-		margin: 20px;
+		margin: auto var(--spacing-medium);
 	}
 
 	.header__nav {
@@ -120,7 +120,5 @@ export default {
 			text-align: center;
 			z-index: 14;
 		}
-
-		.header__search {}
 	}
 </style>

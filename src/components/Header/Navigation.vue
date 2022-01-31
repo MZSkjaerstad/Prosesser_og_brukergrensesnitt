@@ -51,7 +51,7 @@
       background: var(--secondary-color);
       display: flex;
       justify-content: space-evenly;
-      padding: 20px;
+      padding: var(--spacing-small);
 	}
 
    .navigation__item {

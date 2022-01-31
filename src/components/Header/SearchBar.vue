@@ -22,19 +22,21 @@ export default {
 <style>
 	.search-bar {
 		width: 100%;
+		height: 64px;
 		background: var(--secondary-color);
 		display: flex;
 		justify-content: center;
+		padding-left: var(--spacing-large);
 	}
 
 	#search {
 		font: var(--font-family);
+		font-size: var(--font-size-body);
+		font-weight: var(--font-weight-body);
 		background: var(--secondary-color);
 		margin: 15px;
 		width: 40%;
-		border-top: none;
-		border-left: none;
-		border-right: none;
+		border: 0;
 		border-bottom: 1px solid black;
 		outline: none;
 	}
