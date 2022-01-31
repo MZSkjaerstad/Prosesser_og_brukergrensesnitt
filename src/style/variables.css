@@ -11,20 +11,12 @@
    --font-family: "JetBrainsMono";
 
    --font-size-body: 30px;
-   --font-size-large: 1.65rem;
-   --font-size-small: 0.65rem;
+   --font-size-large: 1.65em;
+   --font-size-small: 0.65em;
 
    /* Spacing */
 
    --spacing-small: 20px;
-   --spacing-medium: 2rem;
-   --spacing-large: 5rem;
-}
-
-@media screen and (max-width: 1100px) {
-   :root {
-      --font-size-body: 20px;
-
-      --spacing-small: 10px;
-   }
+   --spacing-medium: 40px;
+   --spacing-large: 100px;
 }
