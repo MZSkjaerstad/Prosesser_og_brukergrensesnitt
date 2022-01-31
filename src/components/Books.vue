@@ -32,15 +32,15 @@
 <style>
     .books {
         width: 100%;
-        padding: 100px 10px;
+        padding: var(--spacing-large) 10px;
     }
 
     .books__title {
         width: 100%;
-        font-size: var(--font-size);
+        font-size: var(--font-size-body);
         display: flex;
         justify-content: center;
-        padding:0px 0px 40px 0px;
+        padding:0px 0px var(--spacing-medium) 0px;
     }
 
     .books__display {
@@ -48,7 +48,7 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         column-gap: 10px;
-        row-gap: 40px;
+        row-gap: var(--spacing-medium);
     }
 
     .book__imgframe {

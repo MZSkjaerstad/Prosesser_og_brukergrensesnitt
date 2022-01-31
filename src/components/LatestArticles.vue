@@ -72,9 +72,10 @@
         text-align: center;
         align-items: center;
         justify-content: center;
-        padding-top: 40px;
-        font-size: 30px;
-        font-weight: 400;
+        padding-top: var(--spacing-medium);
+		font-family: var(--font-family);
+		font-weight: var(--font-weight-body);
+		font-size: var(--font-size-body);
         width: 100%;
         padding: 20px 10px;
     }
@@ -86,18 +87,18 @@
     }
 
     .latest__title {
-        padding-top: 40px;
-        font-size: 50px;
+        padding-top: var(--spacing-medium);
+        font-size: var(--font-size-large);
     }
 
     .latest__text {
-        padding: 20px 20px 0px;
-        font-size: 20px;
+        padding: var(--spacing-small) var(--spacing-small) 0px;
+        font-size: var(--font-size-small);
     }
 
     .latest__picture-frame {
         width: 100%;
-        padding-top: 40px;   
+        padding-top: var(--spacing-medium);   
     }
 
     .latest__picture {
@@ -110,7 +111,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 10px;
-        padding-top: 90px;
+        padding-top: var(--spacing-large);
     }
 
     .next__article {
@@ -118,8 +119,8 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 40px;
-        font-size: 30px;
+        padding-top: var(--spacing-medium);
+        font-size: var(--font-size-body);
         font-weight: 400;
         width: 100%;
     }
@@ -131,20 +132,20 @@
     }
 
     .next__title {
-        font-size: 50px;
+        font-size: var(--font-size-large);
         width: 80%;
     }
 
     .next__text {
         width: 100%;
-        padding-top: 20px;
-        font-size: 20px;
+        padding-top: var(--spacing-small);
+        font-size: var(--font-size-small);
     }
 
     .next__picture-frame {
         width: 100%;
         height: auto;
-        padding-top: 40px;
+        padding-top: var(--spacing-medium);
     }
 
     .next__picture {
@@ -153,7 +154,7 @@
 
     @media screen and (max-width: 1100px) {
         .articles {
-            padding: 40px 0px 0px;
+            padding: var(--spacing-medium) 0px 0px;
         }
 
         .articles__latest {

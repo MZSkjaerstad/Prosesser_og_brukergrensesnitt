@@ -54,7 +54,9 @@ export default {
 		width: 95%;
 		height: 62px;
 		padding: 11px;
-		font-size: 1em;
+		font-family: var(--font-family);
+		font-weight: var(--font-weight-body);
+		font-size: var(--font-size-body);
 		position: sticky;
 		bottom: 10px;
 		background: var(--secondary-color);

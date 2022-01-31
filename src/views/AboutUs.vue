@@ -1,5 +1,5 @@
 <template>
-   <section class="about-us">
+   <section class="about-us ">
       <h1 class="about-us__title"> {{ page.content.title }} </h1>
       <div class="about-us__body">   
          <p class="body__paragraf"> {{ page.content.body[0] }} </p>
@@ -32,28 +32,26 @@ export default {
 
 <style>
    .about-us {
-      width: 100vw;
+      width: 100%;
       display: grid;
       justify-content: center;
+      padding: 0 336px;
    }
 
    .about-us__title {
       text-align: center;
-      font-size: 50px;
+      font-size: var(--font-size-large);
       font-weight: 400;
-      width: 1260px;
-      height: 132px;
-      margin-top: 167px;
-      margin-bottom: 99px;
+      margin-top: var(--spacing-medium);
+      margin-bottom: var(--spacing-large);
    }
 
    .about-us__body {
-      width: 1260px;
-      margin-bottom: 120px;
+      margin-bottom: var(--spacing-large);
    }
 
    .body__paragraf {
       font-size: var(--font-size);
-      margin-bottom: 39.6px;
+      margin-bottom: var(--spacing-medium);
    }
 </style>

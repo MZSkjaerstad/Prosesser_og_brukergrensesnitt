@@ -59,8 +59,8 @@
 
    .journal__header {
       text-align: center;
-      font-size: 30px;
-      margin-bottom: 40px;
+      font-size: var(--font-size-body);
+      margin-bottom: var(--spacing-medium);
       font-family: var(--font-family);
       font-weight: 400;
    }
@@ -84,7 +84,7 @@
       width: 100%;
       height: 198px;
       text-align: center;
-      font-size: 50px;
+      font-size: var(--font-size-large);
       font-weight: 400;
    }
 
@@ -100,7 +100,7 @@
       }
 
       .caption__text {
-         font-size: 20px;
+         font-size: var(--font-size-small);
       }
    }
 
@@ -123,7 +123,7 @@
       height: 24px;
       width: 24px;
       border-radius: 50%;
-      margin: 0px 20px;
+      margin: 0px var(--spacing-small);
       background: none;
       border: solid 1px;
       border-color: white;
@@ -142,7 +142,7 @@
       }
 
       .journal__header {
-         margin-bottom: 40px;
+         margin-bottom: var(--spacing-medium);
       }
 
       .journal__slideshow {
@@ -159,7 +159,7 @@
       }
 
       .caption__text {
-         font-size: 20px;
+         font-size: var(--font-size-small);
       }
    }
 </style>

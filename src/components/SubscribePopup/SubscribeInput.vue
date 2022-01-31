@@ -43,7 +43,8 @@ export default {
 		border-bottom: 1px solid black;
 		height: 100%;
 		font-family: var(--font-family);
-		font-size: 30px;
+		font-weight: var(--font-weight-body);
+		font-size: var(--font-size-body);
 	}
 
 	.input-container__button {
@@ -54,7 +55,8 @@ export default {
 		user-select: none;
 		border-radius: 10px;
 		font-family: var(--font-family);
-		font-size: 30px;
+		font-weight: var(--font-weight-body);
+		font-size: var(--font-size-body);
 		margin: 0 0 0 0.3em;
 		padding: 1px 6%;
 	}
