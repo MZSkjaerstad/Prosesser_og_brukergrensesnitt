@@ -82,10 +82,8 @@
         grid-column: 1 / span 12;
         grid-row: 2;
         overflow: hidden;
-        height: 400px;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
 
     .article__image {
@@ -118,11 +116,6 @@
         .article__details {
             grid-column: 1 / span 12;
             padding: 0 var(--spacing-small);
-        }
-
-        .article__image {
-            width: auto;
-            height: 100%;
         }
 
         .article__caption {
