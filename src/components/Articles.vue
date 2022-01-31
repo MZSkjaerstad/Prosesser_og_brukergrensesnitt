@@ -1,15 +1,17 @@
 <template>
     <main class="article">
-        <div class="article__author">
-            {{ article.author }}
+        <div class="article__details">
+            <div class="article__author">
+                {{ article.author }}
+            </div>
+
+            <div class="article__title">
+                {{ article.title }}
+            </div>
         </div>
 
-        <div class="article__title">
-            {{ article.title }}
-        </div>
-
-        <figure class="article__picture">
-			<img class="picture" :src="article.picture"/>
+        <figure class="article__image-frame">
+			<img class="article__image" :src="article.picture"/>
 		</figure>
 
         <div class="article__caption">
@@ -17,19 +19,19 @@
         </div>
 
         <div class="article__text">
-            <div class="text">
+            <div class="text__section">
                 {{ article.body[0] }}
             </div>
 
-            <div class="text">
+            <div class="text__section">
                 {{ article.body[1] }}
             </div>
 
-            <div class="text">
+            <div class="text__section">
                 {{ article.body[2] }}
             </div>
 
-            <div class="text">
+            <div class="text__section">
                 {{ article.body[3] }}
             </div>
         </div>
@@ -41,12 +43,6 @@
 		props: [
 			'id'
 		],
-        
-        data() {
-            return {
-            
-            }
-        },
 
         computed: {
             article: function() {
@@ -59,76 +55,77 @@
 </script>
 
 <style>
-    .article__author {
-        padding-left: 20px;
-        padding-top: 40px;
-        font-size: 20px;
-        font-weight: 400;
+
+    .article {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
     }
 
-    @media screen and (min-width: 768px) {
-        .article__author {
-            padding-left: 179px;
-            font-size: 30px;
-        }
+    .article__details {
+        grid-column: 2 / span 10;
+        grid-row: 1;
+    }
+
+    .article__author {
+        padding-top: var(--spacing-medium);
+        font-size: var(--font-size-body);
+        font-weight: 400;
     }
 
     .article__title {
-        padding: 0px 20px;
-        padding-bottom: 30px;
-        font-size: 30px;
+        padding-bottom: var(--spacing-medium);
+        font-size: var(--font-size-large);
         font-weight: 400;
     }
 
-    @media screen and (min-width: 768px) {
-        .article__title {
-            padding: 0px 179px;
-            font-size: 40px;
-        }
-    }
-
-    .article__picture {
-        display: flex;
-        align-items: center;
+    .article__image-frame {
+        grid-column: 1 / span 12;
+        grid-row: 2;
         overflow: hidden;
-        height: 400px;
+        display: flex;
+        justify-content: center;
     }
 
-    @media screen and (min-width: 768px) {
-        .article__picture {
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            height: 750px;
-        }
-    }
-
-    .picture {
+    .article__image {
         width: 100%;
         height: auto;
     }
 
     .article__caption {
-        padding-left: 20px;
-        padding-top: 8px;
+        grid-column: 1 / span 12;
+        grid-row: 3;
+        font-size: var(--font-size-small);
+        padding-top: var(--spacing-small);
         font-weight: 400;
+        padding-left: var(--spacing-small);
     }
 
     .article__text {
-        padding: 70px 20px;
-        font-size: 20px;
+        grid-column: 3 / span 8;
+        grid-row: 4;
+        padding: var(--spacing-large) 0 var(--spacing-large) 0;
+        font-size: var(--font-size-body);
         font-weight: 400;
     }
 
-    @media screen and (min-width: 768px) {
-        .article__text {
-            padding: 100px 250px;
-            font-size: 30px;
-            font-weight: 400;
-        }
+    .text__section {
+        margin-bottom: var(--spacing-medium);
     }
 
-    .text {
-        padding-bottom: 20px;
+    @media  screen and (max-width: 900px) {
+        .article__details {
+            grid-column: 1 / span 12;
+            padding: 0 var(--spacing-small);
+        }
+
+        .article__caption {
+            grid-column: 1 / span 12;
+            padding: var(--spacing-small) var(--spacing-small) 0 var(--spacing-small);
+        }
+
+        .article__text {
+            grid-column: 1 / span 12;
+            padding: var(--spacing-large) var(--spacing-small) var(--spacing-large) var(--spacing-small);
+        }
     }
 </style>
