@@ -1,22 +1,15 @@
 <template>
    <footer class="footer">
       <div class="footer__name">in(dex)</div>
-      <div class="Footer__info">
-         <div class="footer__address">172 Classon Avenue. <br> Brooklyn, NY 11205. <br> USA</div>
+      <div class="footer__address">172 Classon Avenue. Brooklyn, NY 11205.<br> USA</div>
 
-         <!-- 
-            seksjonen i figma filen er 5px for lang 
-            mangler også informasjon om avstand og om pil-ikon
-         -->
-
-         <div class="footer__contact">
-            <router-link class="navigation__link footer__link" :to="{path:'about-us'}">About us</router-link>
-            <div class="contact__social">
-               <a class="social__link footer__link" href="">Instagram ↗</a>
-               <a class="social__link footer__link" href="">Twitter ↗</a>
-            </div>
-            <a href="mailto:ind@dex.info" class="contact__email">in@dex.info</a>
-         </div>
+      <div class="footer__contact">
+         <router-link class="navigation__link footer__link" :to="{path:'about-us'}">About us</router-link>
+         <br><br>
+         <a class="social__link footer__link" href="">Instagram ↗</a> <br>
+         <a class="social__link footer__link" href="">Twitter ↗</a>
+         <br><br>
+         <a href="mailto:ind@dex.info" class="contact__email">in@dex.info</a>
       </div>
    </footer>
 </template>
@@ -28,30 +21,27 @@
 <style>
 
    .footer {
-      display: flex;
-      height: 289px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
       width: 100%;
-      justify-content: space-between;
-      padding: 20px;
+      padding: var(--spacing-small);
    }
 
-   .footer__info {
-      display: flex;
-      transform: translateX(-25%);
+   .footer__name {
+      grid-column: 1;
+   }
+
+   .footer__address {
+      grid-column: 6 / span 4;
+      padding-right: var(--spacing-small);
    }
    
    .footer__contact {
-      display: grid;
-      margin-left: 91.94;
-
-   }
-
-   .social__link {
-      display: grid;
+      grid-column: 10 / span 3;
    }
 
    .footer__link {
-      font-size: 30px;
+      font-size: var(--font-size-body);
    }
 
    a {
@@ -63,19 +53,17 @@
       color: var(--highlight-color);
    }
 
-   @media screen and (max-width: 1100px) {
+   @media screen and (max-width: 900px) {
+      .footer {
+         grid-template-columns: repeat(3, 1fr);
+      }
+
       .footer__address {
          display: none;
       }
 
-      .footer {
-         justify-content: space-between;
-      }
-
-      .footer__info {
-         transform: translateX(none);
-         padding-left: 10px;
+      .footer__contact {
+         grid-column: 3 / span 1;
       }
    }
-
 </style>

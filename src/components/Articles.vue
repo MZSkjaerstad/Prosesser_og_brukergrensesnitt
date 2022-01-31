@@ -95,15 +95,14 @@
         grid-column: 1 / span 12;
         grid-row: 3;
         font-size: var(--font-size-small);
-        padding-top: var(--spacing-small);
+        padding: var(--spacing-small) var(--spacing-small) 0 var(--spacing-small);
         font-weight: 400;
-        padding-left: var(--spacing-small);
     }
 
     .article__text {
         grid-column: 3 / span 8;
         grid-row: 4;
-        padding: var(--spacing-large) 0 var(--spacing-large) 0;
+        padding: var(--spacing-large) 0 var(--spacing-medium) 0;
         font-size: var(--font-size-body);
         font-weight: 400;
     }
@@ -125,7 +124,7 @@
 
         .article__text {
             grid-column: 1 / span 12;
-            padding: var(--spacing-large) var(--spacing-small) var(--spacing-large) var(--spacing-small);
+            padding: var(--spacing-large) var(--spacing-small) var(--spacing-medium) var(--spacing-small);
         }
     }
 </style>
