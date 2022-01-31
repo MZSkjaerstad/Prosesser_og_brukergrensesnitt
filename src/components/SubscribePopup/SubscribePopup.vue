@@ -1,9 +1,11 @@
 <template>
-  <div class="subscribe" v-if='this.SubscribePopup.visible' @click='showInput()'>
-	  <p class="subscribe__text" v-if='!this.SubscribeInput.visible'>Subscribe to the in(dex) newsletter for monthly updates</p>
-	  <SubscribeInput v-if='this.SubscribeInput.visible' />
-	  <CloseButton class="subscribe__close" @click="closePopup()" />
-  </div>
+	<div class="grid">
+  		<div class="subscribe" v-if='this.SubscribePopup.visible' @click='showInput()'>
+	  		<p class="subscribe__text" v-if='!this.SubscribeInput.visible'>Subscribe to the in(dex) newsletter for monthly updates</p>
+	  		<SubscribeInput v-if='this.SubscribeInput.visible' />
+	  		<CloseButton class="subscribe__close" @click="closePopup()" />
+		</div>
+	</div>
 </template>
 
 <script>
@@ -45,23 +47,30 @@ export default {
 </script>
 
 <style>
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		z-index: 1;
+		position: sticky;
+	}
+
 	.subscribe {
 		display: flex;
+		grid-column: 1 / span 12;
+		grid-row: 1;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 		margin: auto;
-		width: 95%;
 		height: 62px;
-		padding: 11px;
+		width: 100%;
 		font-family: var(--font-family);
 		font-weight: var(--font-weight-body);
 		font-size: var(--font-size-body);
-		position: sticky;
+
 		bottom: 10px;
 		background: var(--secondary-color);
 		cursor: pointer;
-		z-index: 1;
 		border-radius: 10px;
 	}
 
