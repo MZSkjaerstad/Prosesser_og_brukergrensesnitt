@@ -21,5 +21,6 @@ export default {
 		cursor: pointer;
 		outline: none;
 		background: transparent;
+		position: relative;
 	}
 </style>
