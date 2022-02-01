@@ -16,6 +16,7 @@ export default {
 <style>
 	.close-button {
 		height: 100%;
+		width: 100%;
 		width: auto;
 		border: 0;
 		cursor: pointer;
@@ -24,6 +25,5 @@ export default {
 		position: relative;
 		right: 0;
 		height: auto;
-		
 	}
 </style>

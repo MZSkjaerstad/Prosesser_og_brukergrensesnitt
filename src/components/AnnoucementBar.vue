@@ -55,4 +55,24 @@ export default {
 			transform: translate(-100%, 0);
 		}
 	}
+
+	@media only screen and (max-device-width : 767px) and (-webkit-min-device-pixel-ratio : 2) {
+		.announcement-bar {
+			height: 40px;
+		}
+	}
+
+
+   @media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
+		.announcement-bar {
+			height: 46px;
+		}
+	}
+
+
+   @media only screen  and (min-device-width : 1001px) and (max-device-width : 1200px) {
+		.announcement-bar {
+			height: 52px;
+		}
+   }
 </style>

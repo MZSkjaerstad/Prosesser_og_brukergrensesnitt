@@ -108,10 +108,35 @@
     }
 
     @media only screen and (max-device-width : 767px) and (-webkit-min-device-pixel-ratio : 2) {
+    
 		.article__details {
             grid-column: 1 / span 12;
             padding: 0 var(--spacing-small);
             
+        }
+
+        .article__title {
+            font-size: 20px;
+        }
+
+        .article__caption {
+            grid-column: 1 / span 12;
+            padding: var(--spacing-small) var(--spacing-small) 0 var(--spacing-small);
+        }
+
+        .article__text {
+            grid-column: 1 / span 12;
+            padding: var(--spacing-medium) var(--spacing-small) var(--spacing-medium) var(--spacing-small);
+            font-size: 16px;
+        }
+	}
+
+
+   @media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
+   
+       .article__details {
+            grid-column: 1 / span 12;
+            padding: 0 var(--spacing-small);
         }
 
         .article__caption {
@@ -127,57 +152,20 @@
 	}
 
 
-   @media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
-       .article__details {
-            grid-column: 1 / span 12;
-            padding: 0 var(--spacing-small);
-        }
-
-        .article__caption {
-            grid-column: 1 / span 12;
-            padding: var(--spacing-small) var(--spacing-small) 0 var(--spacing-small);
-        }
-
-        .article__text {
-            grid-column: 1 / span 12;
-            padding: var(--spacing-medium) var(--spacing-small) var(--spacing-medium) var(--spacing-small);
-            font-size: 20px;
-        }
-	}
-
-
    @media only screen  and (min-device-width : 1001px) and (max-device-width : 1200px) {
+
         .article__details {
             grid-column: 1 / span 12;
             padding: 0 var(--spacing-small);
         }
 
         .article__caption {
-            grid-column: 1 / span 12;
             padding: var(--spacing-small) var(--spacing-small) 0 var(--spacing-small);
         }
 
         .article__text {
-            grid-column: 1 / span 12;
             padding: var(--spacing-medium) var(--spacing-small) var(--spacing-medium) var(--spacing-small);
             font-size: 22px;
         }
 	}
-
-    /* @media  screen and (max-width: 900px) {
-        .article__details {
-            grid-column: 1 / span 12;
-            padding: 0 var(--spacing-small);
-        }
-
-        .article__caption {
-            grid-column: 1 / span 12;
-            padding: var(--spacing-small) var(--spacing-small) 0 var(--spacing-small);
-        }
-
-        .article__text {
-            grid-column: 1 / span 12;
-            padding: var(--spacing-large) var(--spacing-small) var(--spacing-medium) var(--spacing-small);
-        }
-    } */
 </style>

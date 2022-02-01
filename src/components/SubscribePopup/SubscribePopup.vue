@@ -70,6 +70,7 @@ export default {
 	}
 
 	.subscribe__close {
+		position: absolute;
 		display: flex;
 		justify-self: flex-end;
 	}
