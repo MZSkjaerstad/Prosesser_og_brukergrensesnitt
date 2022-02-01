@@ -53,4 +53,43 @@ export default {
       font-size: var(--font-size);
       margin-bottom: var(--spacing-medium);
    }
+
+   @media only screen and (max-device-width : 767px) and (-webkit-min-device-pixel-ratio : 2) {
+      .about-us__details {
+         grid-column: 1 / span 12;
+         padding: 0 var(--spacing-small);
+      }
+
+      .about-us__title {
+         margin-top: var(--spacing-small);
+         margin-bottom: var(--spacing-medium);
+      }
+
+      .body__paragraf {
+         font-size: 16px;
+         margin-bottom: var(--spacing-small);
+      }
+	}
+
+   @media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
+      .about-us__details {
+         grid-column: 1 / span 12;
+         padding: 0 var(--spacing-small);
+      }
+
+      .about-us__title {
+         margin-top: var(--spacing-small);
+         margin-bottom: var(--spacing-medium);
+      }
+
+      .body__paragraf {
+         font-size: 18px;
+      }
+	}
+
+   @media only screen  and (min-device-width : 1001px) and (max-device-width : 1200px) {
+      .body__paragraf {
+         font-size: 22px;
+      }
+	}
 </style>
