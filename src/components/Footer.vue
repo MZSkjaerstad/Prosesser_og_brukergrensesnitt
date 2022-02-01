@@ -58,8 +58,22 @@ export default {
    .footer a:hover {
       color: var(--highlight-color);
    }
+   
+   @media only screen and (max-device-width : 767px) and (-webkit-min-device-pixel-ratio : 2){
+      .footer {
+         grid-template-columns: repeat(3, 1fr);
+      }
 
-   @media screen and (max-width: 900px) {
+      .footer__address {
+         display: none;
+      }
+
+      .footer__contact {
+         grid-column: 3 / span 1;
+      }
+   }
+
+   @media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
       .footer {
          grid-template-columns: repeat(3, 1fr);
       }
