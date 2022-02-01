@@ -26,6 +26,7 @@ export default {
 		background: var(--secondary-color);
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
+		padding-right: var(--spacing-small);
 	}
 
 	#search {

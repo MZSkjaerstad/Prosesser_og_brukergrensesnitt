@@ -68,7 +68,7 @@ export default {
 	}
 
 	.subscribe__text {
-
+		font-size: var(--font-size-body);
 	}
 
 	.subscribe__close {
