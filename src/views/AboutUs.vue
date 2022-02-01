@@ -29,6 +29,11 @@ export default {
 
 <style>
    .about-us {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+   }
+
+   .about-us__details {
       grid-column: 3 / span 8;
         grid-row: 1;
    }
