@@ -186,4 +186,19 @@
             padding-top: var(--spacing-small);
         }
     }
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1000px) {
+        .articles {
+            padding: var(--spacing-medium) 0px 0px;
+        }
+
+        .articles__latest {
+            grid-column: 1 / span 12;
+        }
+
+        .next__article {
+            grid-column: span 12;
+            padding-top: var(--spacing-small);
+        }
+    }
 </style>
