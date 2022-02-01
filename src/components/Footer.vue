@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Logo from "./header/Logo.vue"
+import Logo from "/src/components/header/Logo.vue"
 
 export default {
    components: {
