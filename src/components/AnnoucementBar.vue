@@ -36,8 +36,6 @@ export default {
 	}
 
 	.announcement-bar__message {
-		font-family: var(--font-family);
-		font-weight: var(--font-weight-body);
 		font-size: var(--font-size-body);
 		animation: scroll 20s linear infinite;
 		padding-left: 100%;

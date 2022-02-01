@@ -73,8 +73,6 @@
         align-items: center;
         justify-content: center;
         padding-top: var(--spacing-medium);
-		font-family: var(--font-family);
-		font-weight: var(--font-weight-body);
 		font-size: var(--font-size-body);
         width: 100%;
         padding: 20px 10px;
@@ -121,7 +119,6 @@
         text-align: center;
         padding-top: var(--spacing-medium);
         font-size: var(--font-size-body);
-        font-weight: 400;
         width: 100%;
     }
 
