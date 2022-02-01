@@ -196,9 +196,13 @@
             grid-column: 1 / span 12;
         }
 
+        .articles__next {
+            padding-top: 0;
+        }
+
         .next__article {
             grid-column: span 12;
-            padding-top: var(--spacing-small);
+            padding-top: var(--spacing-medium);
         }
     }
 </style>

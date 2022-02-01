@@ -59,9 +59,9 @@
 
    .journal__header {
       grid-column: 5 / span 4;
-        grid-row: 1;
+      grid-row: 1;
       text-align: center;
-      
+      font-size: var(--font-size-body);
       margin-bottom: var(--spacing-medium);
    }
 
