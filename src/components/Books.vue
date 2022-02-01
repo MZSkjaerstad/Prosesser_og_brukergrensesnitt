@@ -46,9 +46,13 @@
     .books__display {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(12, 1fr);
         column-gap: 10px;
         row-gap: var(--spacing-medium);
+    }
+
+    .books__book {
+        grid-column: span 2;
     }
 
     .book__imgframe {
@@ -62,12 +66,20 @@
     .book__writers {
         padding-top: 10px;
         text-transform: uppercase;
+        font-size: var(--font-size-small);
+    }
+
+    .book__title {
+        font-size: var(--font-size-small);
     }
 
     @media screen and (max-width: 1100px) {
         .books__display {
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        .books__book {
+            grid-column: span 4;
         }
     }
 </style>
