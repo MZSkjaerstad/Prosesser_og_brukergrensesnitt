@@ -22,3 +22,15 @@
    --spacing-medium: 40px;
    --spacing-large: 100px;
 }
+
+@media only screen and (max-device-width : 767px) and (-webkit-min-device-pixel-ratio : 2){
+   :root {
+      --font-size-body: 18px;
+   }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+   :root {
+      /* --font-size-body: 25px; */
+   }
+}
