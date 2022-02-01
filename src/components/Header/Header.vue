@@ -1,6 +1,6 @@
 <template>
 	<header class="header">
-		<Logo class="header__logo" />
+		<Logo :class="`header__logo header__logo-hidden--${hideLogo}`" />
 
 		<SearchBar :class="`header__search header__search-hidden--${hideSearch}`"/>
 
@@ -8,7 +8,7 @@
 
 		<div class="header__buttons">
 			<SearchButton @click="toggleSearch()"/>
-			<MenuButton @click="toggleNav()" />
+			<MenuButton class="header__menu-button" @click="toggleNav()" />
 		</div>
 	</header>
 </template>
@@ -34,6 +34,7 @@ export default {
 	   return {
 		   hideNav: true,
 		   hideSearch: true,
+			hideLogo: false,
 	   }
    },
 
@@ -42,8 +43,10 @@ export default {
 			if (this.hideNav === false) {
 				this.hideNav = !this.hideNav
 				this.hideSearch = !this.hideSearch
+				this.hideLogo = !this.hideLogo
 			} else {
 		   	this.hideSearch = !this.hideSearch
+				this.hideLogo = !this.hideLogo
 			}
 	   },
 
@@ -51,6 +54,7 @@ export default {
 		   if (this.hideSearch === false) {
 				this.hideSearch = !this.hideSearch
 				this.hideNav = !this.hideNav
+				this.hideLogo = !this.hideLogo
 			} else {
 		   	this.hideNav = !this.hideNav
 			}
@@ -64,23 +68,23 @@ export default {
 		width: 100%;
 		height: 64px;
 		background: inherit;
-		display: flex;
-		justify-content: space-between;
-		position: sticky;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
 		top: 0;
 	}
 
 	.header__logo {
-		margin: auto var(--spacing-medium);
+		grid-column: 1 / span 2;
+		margin: auto var(--spacing-small);
 		z-index: 16;
 	}
 
 	.header__buttons {
-		width: 100px;
+		grid-column: 12 / span 1;
 		display: flex;
 		justify-content: space-between;
 		z-index: 16;
-		margin: auto var(--spacing-medium);
+		margin: auto var(--spacing-small);
 	}
 
 	.header__nav {
@@ -93,6 +97,10 @@ export default {
 		z-index: 14;
 	}
 
+	.header__menu-button {
+		margin-left: var(--spacing-small);
+	}
+
 	/* Toggle functions */
 
 	.header__nav-hidden--true {
@@ -100,7 +108,7 @@ export default {
 	}
 
 	.header__nav-hidden--false {
-		display: flex;
+		display: grid;
 	}
 
 	.header__search-hidden--true {
@@ -108,17 +116,24 @@ export default {
 	}
 
 	.header__search-hidden--false {
-		display: flex;
+		display: grid;
 	}
 
-	@media  screen and (max-width: 1100px) {
+	@media  screen and (max-width: 900px) {
 
 		.header__nav {
 			width: 100%;
-			position: absolute;
-			padding-top: 50px;
+			padding: var(--spacing-large) 0 var(--spacing-medium) 0;
 			text-align: center;
 			z-index: 14;
+		}
+
+		.header__logo-hidden--true {
+			display: none;
+		}
+
+		.header__logo-hidden--false {
+			display: grid;
 		}
 	}
 </style>

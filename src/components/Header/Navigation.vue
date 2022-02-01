@@ -1,8 +1,6 @@
 <template>
    <div class="navigation">
-      <div class="navigation__spacer"/>
-
-      <div class="nagigation__links navigation__item">
+      <div class="navigation__links navigation__item">
          <div class="navigation__link-container" v-for="link in navigation">
             <router-link class="navigation__link" :to="{path: link.routerLink, props: link.routerProps}">{{ link.title }}</router-link>
          </div>
@@ -49,15 +47,18 @@
       width: 100%;
 		height: auto;
       background: var(--secondary-color);
-      display: flex;
-      justify-content: space-evenly;
       padding: var(--spacing-small);
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
 	}
 
    .navigation__item {
       display: flex;
       flex-direction: column;
-      transform: translateX(50%);
+   }
+
+   .navigation__links {
+      grid-column: 6 / span 2;
    }
 
    .navigation__link-container {
@@ -74,25 +75,26 @@
       text-decoration: none;
    }
 
+   .navigation__contact {
+      grid-column: 9 / span 3;
+   }
+
    @media screen and (max-width: 1100px) {
       .navigation {
-         width: 40%;
+         width: 100%;
+         grid-template-columns: repeat(1, 1fr);
+      }
+
+      .navigation__links {
+         grid-column: 1 / span 1;
       }
 
       .navigation__contact {
          display: none;
       }
 
-      .navigation__spacer {
-         display: none;
-      }
-
-      .navigation__item {
-         transform: translateX(0%);
-      }
-
       .navigation__link {
-         font-size: 40px;
+         font-size: var(--font-size-medium);
       }
    }
 

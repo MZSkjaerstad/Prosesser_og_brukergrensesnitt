@@ -3,4 +3,5 @@ body {
    font-family: var(--font-family);
    color: var(--primary-color);
    font-size: var(--font-size-body);
+   font-weight: 400;
 }
