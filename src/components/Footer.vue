@@ -1,6 +1,6 @@
 <template>
    <footer class="footer">
-      <div class="footer__name">in(dex)</div>
+      <div class="footer__logo"> <Logo /> </div>
       <div class="footer__address">172 Classon Avenue. Brooklyn, NY 11205.<br> USA</div>
 
       <div class="footer__contact">
@@ -14,6 +14,16 @@
    </footer>
 </template>
 
+<script>
+import Logo from "/src/components/header/Logo.vue"
+
+export default {
+   components: {
+      Logo,
+   }
+}
+</script>
+
 <style>
 
    .footer {
@@ -23,7 +33,7 @@
       padding: var(--spacing-small);
    }
 
-   .footer__name {
+   .footer__logo {
       grid-column: 1;
    }
 
