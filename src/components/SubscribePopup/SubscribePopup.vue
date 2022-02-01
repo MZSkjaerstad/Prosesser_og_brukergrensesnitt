@@ -53,13 +53,11 @@ export default {
 		margin: auto;
 		width: 95%;
 		height: 62px;
-		padding: 11px;
 		font-size: var(--font-size-body);
 		position: sticky;
 		bottom: 10px;
 		background: var(--secondary-color);
 		cursor: pointer;
-		z-index: 1;
 		border-radius: 10px;
 	}
 
@@ -72,8 +70,39 @@ export default {
 	}
 
 	.subscribe__close {
-		position: absolute;
-		right: 0;
+		display: flex;
+		justify-self: flex-end;
 	}
+
+	@media only screen and (max-device-width : 512px) and (-webkit-min-device-pixel-ratio : 2) {
+		.subscribe {
+			font-size: 8px;
+			
+		}
+
+		.subscribe__text {
+			font-size: 8px;
+		}
+	}
+
+		@media only screen and (min-device-width : 513px) and (max-device-width : 826px) and (-webkit-min-device-pixel-ratio : 2) {
+		.subscribe {
+			font-size: 12px;
+		}
+
+		.subscribe__text {
+			font-size: 12px;
+		}
+	}
+
+
+   @media only screen and (min-device-width : 827px) and (max-device-width : 1000px) {
+
+	}
+
+
+   @media only screen  and (min-device-width : 1001px) and (max-device-width : 1200px) {
+
+   }
 
 </style>
