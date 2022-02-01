@@ -1,36 +1,41 @@
 <template>
     <main class="articles">
-        Latest
         <div class="articles__latest">
-            <RouterLink :to="{ path: `/${ latestArticle.slug }` }"><div class="latest__title">
-                {{ latestArticle.title }}
-            </div>
+            Latest
+            <RouterLink :to="{ path: `/${ latestArticle.slug }` }">
+                <div class="latest__info">
+                    <div class="latest__title">
+                        {{ latestArticle.title }}
+                    </div>
 
-            <div class="latest__text">
-               {{ latestArticle.lead }}
-            </div>
+                    <div class="latest__text">
+                    {{ latestArticle.lead }}
+                    </div>
+                </div>
 
-            <figure class="latest__picture-frame">
-                <img class="latest__picture" :src="`${latestArticle.picture}`" alt="">
-            </figure>
+                <figure class="latest__picture-frame">
+                    <img class="latest__picture" :src="`${latestArticle.picture}`" alt="">
+                </figure>
             </RouterLink>
         </div>
 
         <div class="articles__next">
-           <div class="next__article" v-for="article in nextArticle" >
-               <RouterLink class="next__link" :to="{ path: `/${ article.slug }` }">
-                    <div class="next__title">
-                        {{ article.title }}
-                    </div>
+            <div class="next__containter">
+                <div class="next__article" v-for="article in nextArticle" >
+                    <RouterLink class="next__link" :to="{ path: `/${ article.slug }` }">
+                        <div class="next__title">
+                            {{ article.title }}
+                        </div>
 
-                    <div class="next__text">
-                        {{ article.lead }}
-                    </div>
+                        <div class="next__text">
+                            {{ article.lead }}
+                        </div>
 
-                    <figure class="next__picture-frame">
-                        <img class="next__picture" :src="`${article.picture}`"/>
-                    </figure>
-                </RouterLink>
+                        <figure class="next__picture-frame">
+                            <img class="next__picture" :src="`${article.picture}`"/>
+                        </figure>
+                    </RouterLink>
+                </div>
             </div>
         </div>
     </main>
@@ -67,55 +72,73 @@
 
 <style>
     .articles {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
         text-align: center;
-        align-items: center;
-        justify-content: center;
-        padding-top: var(--spacing-medium);
-		font-size: var(--font-size-body);
+        padding: var(--spacing-medium) 10px 0 10px;
         width: 100%;
-        padding: 20px 10px;
     }
 
     /* LATEST */
 
+
     .articles__latest {
-        width: 75%;
+        grid-column: 2 / span 10;
+        grid-row: 1;
+    }
+
+    .latest__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .latest__title {
+        width: 80%;
         padding-top: var(--spacing-medium);
         font-size: var(--font-size-large);
+        grid-column: 2 /span 8;
+        grid-row: 1;
     }
 
     .latest__text {
-        padding: var(--spacing-small) var(--spacing-small) 0px;
+        width: 80%;
+        padding-top: var(--spacing-small);
         font-size: var(--font-size-small);
+        grid-column: 3 /span 6;
+        grid-row: 2;
     }
 
     .latest__picture-frame {
+        grid-row: 3;
         width: 100%;
+        height: auto;
         padding-top: var(--spacing-medium);   
     }
 
     .latest__picture {
         width: 100%;
+        height: auto;
     }
 
     /* NEXT */
 
     .articles__next {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-column: 1 / span 12;
+        grid-row: 2;
         column-gap: 10px;
         padding-top: var(--spacing-large);
     }
 
+    .next__containter {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 10px;
+    }
+
     .next__article {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        grid-column: span 6;
         text-align: center;
         padding-top: var(--spacing-medium);
         font-size: var(--font-size-body);
@@ -134,7 +157,7 @@
     }
 
     .next__text {
-        width: 100%;
+        width: 80%;
         padding-top: var(--spacing-small);
         font-size: var(--font-size-small);
     }
@@ -149,19 +172,17 @@
         width: 100%;
     }
 
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 900px) {
         .articles {
             padding: var(--spacing-medium) 0px 0px;
         }
 
         .articles__latest {
-            width: 100%;
-            padding: 10px;
+            grid-column: 1 / span 12;
         }
 
-        .articles__next {
-            grid-template-columns: repeat(1, 1fr);
-            padding: 10px;
+        .next__article {
+            grid-column: span 12;
         }
     }
 </style>
