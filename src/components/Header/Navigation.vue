@@ -58,7 +58,7 @@
    }
 
    .navigation__links {
-      grid-column: 6 / span 2;
+      grid-column: 6 / span 3;
    }
 
    .navigation__link-container {
@@ -76,10 +76,11 @@
    }
 
    .navigation__contact {
-      grid-column: 9 / span 3;
+      grid-column: 9 / span 4;
+      padding-left: var(--spacing-small);
    }
 
-   @media screen and (max-width: 1100px) {
+   @media screen and (max-width: 900px) {
       .navigation {
          width: 100%;
          grid-template-columns: repeat(1, 1fr);
