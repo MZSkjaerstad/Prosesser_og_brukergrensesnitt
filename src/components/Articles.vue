@@ -147,7 +147,7 @@
 
 
    @media only screen  and (min-device-width : 1001px) and (max-device-width : 1200px) {
-              .article__details {
+        .article__details {
             grid-column: 1 / span 12;
             padding: 0 var(--spacing-small);
         }
