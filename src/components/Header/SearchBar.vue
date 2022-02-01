@@ -24,20 +24,25 @@ export default {
 		width: 100%;
 		height: 64px;
 		background: var(--secondary-color);
-		display: flex;
-		justify-content: center;
-		padding-left: var(--spacing-large);
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
 	}
 
 	#search {
+		grid-column: 4 / span 6;
 		font: var(--font-family);
 		font-size: var(--font-size-body);
 		font-weight: var(--font-weight-body);
 		background: var(--secondary-color);
 		margin: 15px;
-		width: 40%;
 		border: 0;
 		border-bottom: 1px solid black;
 		outline: none;
+	}
+
+	@media  screen and (max-width: 900px) {
+		#search {
+			grid-column: 1 / span 9;
+		}
 	}
 </style>

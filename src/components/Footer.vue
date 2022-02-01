@@ -14,10 +14,6 @@
    </footer>
 </template>
 
-<script>
-
-</script>
-
 <style>
 
    .footer {
