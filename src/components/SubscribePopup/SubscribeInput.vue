@@ -30,13 +30,17 @@ export default {
 
 <style>
 	.input-container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		
+		width: 100%;
+		grid-column: 4 / span 6;
+		grid-row: 1;
+		display: grid;
+		grid-template-columns: inherit;
 	}
 
 	.input-container__input {
+		grid-column: 1 / span 8;
+      grid-row: 1;
+		width: 100%;
 		border: none;
 		outline: none;
 		background: inherit;
@@ -48,17 +52,18 @@ export default {
 	}
 
 	.input-container__button {
+		grid-column: 9 / span 6;
+		grid-row: 1;
 		background: var(--highlight-color);
 		border: 0;
 		cursor: pointer;
 		outline: none;
 		user-select: none;
 		border-radius: 10px;
+		margin-left: var(--spacing-small);
 		font-family: var(--font-family);
 		font-weight: var(--font-weight-body);
 		font-size: var(--font-size-body);
-		margin: 0 0 0 0.3em;
-		padding: 1px 6%;
 	}
 
 </style>

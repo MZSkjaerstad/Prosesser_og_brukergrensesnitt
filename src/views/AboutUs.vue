@@ -1,11 +1,13 @@
 <template>
    <section class="about-us ">
-      <h1 class="about-us__title"> {{ page.content.title }} </h1>
-      <div class="about-us__body">   
-         <p class="body__paragraf"> {{ page.content.body[0] }} </p>
-         <p class="body__paragraf"> {{ page.content.body[1] }} </p>
-         <p class="body__paragraf"> {{ page.content.body[2] }} </p>
-         <p class="body__paragraf"> {{ page.content.body[3] }} </p>
+      <div class="about-us__details">
+         <h1 class="about-us__title"> {{ page.content.title }} </h1>
+         <div class="about-us__body">   
+            <p class="body__paragraf"> {{ page.content.body[0] }} </p>
+            <p class="body__paragraf"> {{ page.content.body[1] }} </p>
+            <p class="body__paragraf"> {{ page.content.body[2] }} </p>
+            <p class="body__paragraf"> {{ page.content.body[3] }} </p>
+         </div>
       </div>
       
    </section>
@@ -27,10 +29,14 @@ export default {
 
 <style>
    .about-us {
-      width: 100%;
       display: grid;
-      justify-content: center;
-      padding: 0 336px;
+      grid-template-columns: repeat(12, 1fr);
+      width: 100%;
+   }
+
+   .about-us__details {
+      grid-column: 3 / span 8;
+        grid-row: 1;
    }
 
    .about-us__title {
