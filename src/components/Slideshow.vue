@@ -169,42 +169,4 @@
          width: 20px;
       }
    }
-
-  /*  @media screen and (max-width: 1500px){
-      .slideshow__caption {
-         top: 60%;
-      }
-
-      .caption__text {
-         font-size: var(--font-size-small);
-      }
-   }
-
-   @media screen and (max-width: 1100px){
-      .journal {
-         padding: 0px;
-         height: 50%;
-      }
-
-      .journal__header {
-         margin-bottom: var(--spacing-medium);
-      }
-
-      .journal__slideshow {
-         height: 90%;
-      }
-
-      .slideshow__image {
-         width: auto;
-         height: 100%;
-      }
-
-      .slideshow__caption {
-         top: 80%;
-      }
-
-      .caption__text {
-         font-size: var(--font-size-small);
-      }
-   } */
 </style>

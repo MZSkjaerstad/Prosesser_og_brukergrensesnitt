@@ -183,9 +183,6 @@
 
         .next__article {
             grid-column: span 12;
-        }
-
-        .articles__next, .next__article {
             padding-top: var(--spacing-small);
         }
     }

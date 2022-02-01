@@ -22,5 +22,8 @@ export default {
 		outline: none;
 		background: transparent;
 		position: relative;
+		right: 0;
+		height: auto;
+		
 	}
 </style>
