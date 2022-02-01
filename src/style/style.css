@@ -1,7 +1,11 @@
+* {
+   font-family: var(--font-family);
+   font-weight: 400;
+}
+
 body {
    background: var(--background);
    font-family: var(--font-family);
    color: var(--primary-color);
    font-size: var(--font-size-body);
-   font-weight: 400;
 }
