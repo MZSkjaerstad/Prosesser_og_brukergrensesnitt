@@ -30,9 +30,7 @@ export default {
 
 	#search {
 		grid-column: 4 / span 6;
-		font: var(--font-family);
 		font-size: var(--font-size-body);
-		font-weight: var(--font-weight-body);
 		background: var(--secondary-color);
 		margin: 15px;
 		border: 0;

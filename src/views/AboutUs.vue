@@ -36,7 +36,6 @@ export default {
    .about-us__title {
       text-align: center;
       font-size: var(--font-size-large);
-      font-weight: 400;
       margin-top: var(--spacing-medium);
       margin-bottom: var(--spacing-large);
    }

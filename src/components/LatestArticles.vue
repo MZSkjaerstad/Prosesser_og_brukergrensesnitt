@@ -76,9 +76,6 @@
         grid-template-columns: repeat(12, 1fr);
         text-align: center;
         padding: var(--spacing-medium) 10px 0 10px;
-		font-family: var(--font-family);
-		font-weight: var(--font-weight-body);
-		font-size: var(--font-size-body);
         width: 100%;
     }
 
@@ -145,7 +142,6 @@
         text-align: center;
         padding-top: var(--spacing-medium);
         font-size: var(--font-size-body);
-        font-weight: 400;
         width: 100%;
     }
 

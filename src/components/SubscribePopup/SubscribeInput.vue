@@ -42,8 +42,6 @@ export default {
 		background: inherit;
 		border-bottom: 1px solid black;
 		height: 100%;
-		font-family: var(--font-family);
-		font-weight: var(--font-weight-body);
 		font-size: var(--font-size-body);
 	}
 
@@ -54,8 +52,6 @@ export default {
 		outline: none;
 		user-select: none;
 		border-radius: 10px;
-		font-family: var(--font-family);
-		font-weight: var(--font-weight-body);
 		font-size: var(--font-size-body);
 		margin: 0 0 0 0.3em;
 		padding: 1px 6%;

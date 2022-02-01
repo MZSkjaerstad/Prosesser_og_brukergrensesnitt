@@ -69,13 +69,11 @@
     .article__author {
         padding-top: var(--spacing-medium);
         font-size: var(--font-size-body);
-        font-weight: 400;
     }
 
     .article__title {
         padding-bottom: var(--spacing-medium);
         font-size: var(--font-size-large);
-        font-weight: 400;
     }
 
     .article__image-frame {
@@ -96,7 +94,6 @@
         grid-row: 3;
         font-size: var(--font-size-small);
         padding: var(--spacing-small) var(--spacing-small) 0 var(--spacing-small);
-        font-weight: 400;
     }
 
     .article__text {
@@ -104,7 +101,6 @@
         grid-row: 4;
         padding: var(--spacing-large) 0 var(--spacing-medium) 0;
         font-size: var(--font-size-body);
-        font-weight: 400;
     }
 
     .text__section {

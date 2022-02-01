@@ -4,12 +4,12 @@
       <button class="journal__slideshow" @click="next()">
          <img class="slideshow__image" :src="journal[index].image" :alt="journal[index].title">
          <div class="slideshow__caption">
-            <div class="caption__text"> "{{ journal[index].title }}" </div>   
+            <div class="caption__text"> “{{ journal[index].title }}” </div>   
             <div class="caption__text"> {{ journal[index].location }} </div>
             <div class="caption__text"> {{ journal[index].artist }} </div>   
          </div>
          <div class="journal__dots">
-            <button @click="goToIndex(index)" v-for="(image, index) in journal" class="dots__dot" ></button>
+            <button @click="goToIndex(index)" v-for="(image, index) in journal" :class="this.index === index ? 'dots__dot--active' : 'dots__dot'" ></button>
          </div>
       </button>
    </section>
@@ -44,13 +44,14 @@
          goToIndex(index) {
 				this.index = index;
 			},
-      }  
+      }
    }
 </script>
 
 <style>
    .journal {
       display: grid;
+      grid-template-columns: repeat(12, 1fr);
       justify-content: center;
       width: 100%;
       height: 100%;
@@ -58,14 +59,16 @@
    }
 
    .journal__header {
+      grid-column: 6 / span 2;
+        grid-row: 1;
       text-align: center;
       font-size: var(--font-size-body);
       margin-bottom: var(--spacing-medium);
-      font-family: var(--font-family);
-      font-weight: 400;
    }
 
    .journal__slideshow {
+      grid-column: 1 / span 12;
+      grid-row: 2;
       position: relative;
       text-align: center;
       width: 100%;
@@ -78,20 +81,20 @@
    }
 
    .slideshow__caption {
+      grid-column: 6 / span 2;
+      grid-row: 1;
       position: absolute;
       top: 50%;
       transform: translate(-0%, -50%);
       width: 100%;
-      height: 198px;
       text-align: center;
       font-size: var(--font-size-large);
-      font-weight: 400;
    }
 
    .caption__text {
-      color: white;
-      font-family: var(--font-family);
-      font-weight: 400;
+      color: var(--background);
+      font-size: var(--font-size-large);
+      text-shadow: 0px 0px 4px #00000067;
    }
 
    @media screen and (max-width: 1500px){
@@ -125,13 +128,24 @@
       border-radius: 50%;
       margin: 0px var(--spacing-small);
       background: none;
-      border: solid 1px;
-      border-color: white;
+      border: solid 1px white;
       border-width: 2px;
       cursor: pointer;
    }
 
    .dots__dot:hover {
+      
+   }
+
+   .dots__dot--active {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      margin: 0px var(--spacing-small);
+      background: none;
+      border: solid 1px white;
+      border-width: 2px;
+      cursor: pointer;
       background: white;
    }
 
