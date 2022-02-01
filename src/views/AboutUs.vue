@@ -16,11 +16,6 @@
 
 
 export default {
-   data() {
-      return {
-         
-      }
-   },
    computed: {
          page: function(){
             const page = this.$store.getters.getPage
